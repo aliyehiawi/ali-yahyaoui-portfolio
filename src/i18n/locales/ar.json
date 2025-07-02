@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "brand": "علي يحيّاوي",
+    "about": "من أنا",
+    "skills": "المهارات",
+    "experience": "الخبرة",
+    "projects": "المشاريع",
+    "contact": "تواصل معي"
+  },
+  "hero": {
+    "greeting": "مرحباً، أنا <1>{{name}}</1>",
+    "subtitle": "مهندس برمجيات",
+    "description": "أقوم بتصميم وبناء تطبيقات ويب عالية الأداء وقابلة للتوسع باستخدام أحدث التقنيات ومبادئ تصميم الأنظمة القوية.",
+    "cta": {
+      "contact": "تواصل معي",
+      "download": "تحميل السيرة الذاتية"
+    },
+    "imageAlt": "صورة شخصية احترافية"
+  },
+  "about": {
+    "heading": "من أنا",
+    "languages": {
+      "title": "اللغات",
+      "english": "الإنجليزية (بطلاقة)",
+      "arabic": "العربية (اللغة الأم)",
+      "french": "الفرنسية (مستوى احترافي)"
+    },
+    "education": {
+      "title": "التعليم",
+      "degree": "درجة بكالوريوس في علوم الحاسوب",
+      "university": "{{school}}، {{years, digits}}",
+      "universitySchool": "الجامعة اللبنانية",
+      "highschool": "ثانوية حارة حريك",
+      "highschoolDetails": "{{track}}، {{years, digits}}",
+      "track": "الثانوية العامة، فرع العلوم الحياتية"
+    },
+    "methods": {
+      "title": "المنهجيات",
+      "agile": "التطوير الرشيق",
+      "microservices": "معمارية الخدمات المصغرة",
+      "tdd": "التطوير القائم على الاختبار"
+    },
+    "description": "أنا مهندس برمجيات ذو خبرة مثبتة في تطوير نظم الخادم القوية وميزات المواقع الإلكترونية للعملاء الكبار. معروف بسرعة التعلم والعمل الجماعي الاستثنائي، أتميز في البيئات سريعة الوتيرة، وأقدم حلول برمجية عالية الجودة."
+  },
+  "skills": {
+    "heading": "المهارات التقنية",
+    "frontend": {
+      "title": "تطوير الواجهة الأمامية",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "javascript": "JavaScript",
+      "typeScript": "TypeScript",
+      "angular": "Angular",
+      "react": "React",
+      "primeNg": "PrimeNG",
+      "jsp": "JSP",
+      "jsf": "JSF",
+      "tailwindCss": "Tailwind CSS"
+    },
+    "backend": {
+      "title": "تطوير الواجهة الخلفية",
+      "java": "Java",
+      "springBoot": "Spring Boot",
+      "hibernate": "Hibernate",
+      "restApis": "REST APIs",
+      "microservices": "Microservices",
+      "jpa": "JPA",
+      "nodeJs": "Node.js",
+      "express": "Express",
+      "graphql": "GraphQL"
+    },
+    "database": {
+      "title": "قواعد البيانات و DevOps",
+      "oracle": "Oracle",
+      "mySql": "MySQL",
+      "plSql": "PL/SQL",
+      "mongoDb": "MongoDB",
+      "postgreSql": "PostgreSQL",
+      "docker": "Docker",
+      "kubernetes": "Kubernetes",
+      "aws": "AWS",
+      "ciCd": "CI/CD"
+    }
+  },
+  "experience": {
+    "heading": "الخبرة المهنية",
+    "item1": {
+      "title": "مطور Full Stack متوسط المستوى",
+      "period": "{{start, digits}} – حتى الآن",
+      "company": "{{company}} | {{period}}",
+      "stack": "Java و JSF و Spring و Hibernate",
+      "database": "قاعدة بيانات Oracle",
+      "architecture": "معمارية الخدمات المصغرة",
+      "frontend": "Angular",
+      "methodology": "Agile",
+      "tools": "أدوات تطوير",
+      "clients": "Pearson و Disney و L'Oréal",
+      "p1": "قمت بتطوير وصيانة تطبيق IPM Suite، مع تحسين الميزات باستخدام <1>{{stack}}</1>، مع عمل مكثف على <1>{{database}}</1>.",
+      "p2": "قاد ترحيل الوحدات القديمة إلى <1>{{architecture}}</1> باستخدام <1>{{frontend}}</1>، مما حسن أداء النظام.",
+      "p3": "صممت ونفذت أنظمة حرجة وواجهات مستخدم عالية الجودة.",
+      "p4": "مساهم نشط في مراسم <1>{{methodology}}</1>، مما حسن ممارسات الفريق وقاد جلسات نقل المعرفة.",
+      "p5": "قمت بإجراء مبادرات بحثية، وأدخلت <1>{{tools}}</1> جديدة ورفعت معايير الترميز.",
+      "p6": "قدمت دعمًا لعملاء بارزين مثل <2>{{clients}}</2> مع ضمان سلامة البيانات وسريتها."
+    },
+    "item2": {
+      "title": "مطور واجهات أمامية",
+      "year": "{{year, digits}}",
+      "company": "{{company}} | {{year}}",
+      "tech": "React.js",
+      "ui": "واجهات مستخدم ديناميكية",
+      "responsive": "تصميم متجاوب",
+      "p1": "أكملت مشروع منصة تعلّم إلكتروني شامل، واكتسبت خبرة عملية في <1>{{tech}}</1>. طورت <1>{{ui}}</1>، وأدرت الحالة باستخدام هووكس React، وضمنت <1>{{responsive}}</1> عبر الأجهزة."
+    },
+    "item3": {
+      "period": "{{start}} – حتى الآن",
+      "company": "{{role}} | {{period, digits}}",
+      "title": "مطور مستقل",
+      "p1": "قمت بقيادة تصميم وتسليم وكيل محادثة قائم على الذكاء الاصطناعي بمقاييس واسعة، مؤتمتًا تدفقات العمل المعقدة ورافعًا تفاعل المستخدم على منصات متعددة.",
+      "p2": "صممت وطورت لوحة تحكم إدارية قوية لشركة متوسطة الحجم، مكنت من تتبع فوري للسجلات والمدفوعات والتسليمات—مع تعزيز الكفاءة التشغيلية ورؤية البيانات."
+    }
+  },
+  "projects": {
+    "heading": "المشاريع المميزة",
+    "item1": {
+      "title": "تعزيز IPM Suite",
+      "description": "نظام إدارة الحقوق المؤسسي بمعمارية الخدمات المصغرة",
+      "tags": {
+        "java": "Java",
+        "jsf": "JSF",
+        "spring": "Spring",
+        "hibernate": "Hibernate",
+        "oracle": "Oracle",
+        "microservices": "Microservices"
+      },
+      "category": "تطبيق مؤسسي",
+      "button": "تفاصيل"
+    },
+    "item2": {
+      "title": "ترحيل الخدمات المصغرة",
+      "description": "تحديث النظام القديم باستخدام الواجهة الأمامية Angular",
+      "tags": {
+        "angular": "Angular",
+        "springBoot": "Spring Boot",
+        "docker": "Docker",
+        "kubernetes": "Kubernetes",
+        "rest": "REST",
+        "oauth2": "OAuth2"
+      },
+      "category": "معمارية النظام",
+      "button": "تفاصيل"
+    },
+    "item3": {
+      "title": "لوحة تحليلات البيانات",
+      "description": "منصة ذكاء أعمال في الوقت الفعلي",
+      "tags": {
+        "react": "React",
+        "typeScript": "TypeScript",
+        "nodeJs": "Node.js",
+        "mongoDb": "MongoDB",
+        "webSockets": "WebSockets",
+        "d3": "D3.js"
+      },
+      "category": "تصوير البيانات",
+      "button": "تفاصيل"
+    }
+  },
+  "contact": {
+    "heading": "تواصل معي",
+    "infoTitle": "معلومات التواصل",
+    "email": "ali.yehiawii@gmail.com",
+    "phone": "+{{phone, digits}}",
+    "location": "سانت-إتيان، فرنسا",
+    "form": {
+      "label": {
+        "name": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "subject": "الموضوع",
+        "message": "الرسالة"
+      },
+      "button": "إرسال الرسالة"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year, digits}} {{brand}}",
+    "builtWith": "تم بناؤه باستخدام {{heart}} وتقنيات ويب حديثة"
+  }
+}

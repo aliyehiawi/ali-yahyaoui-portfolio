@@ -1,9 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Base */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #000;
   color: #f8fafc;
   overflow-x: hidden;
+}
+
+/* Tech Tag */
+.tech-tag {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  font-family: 'Fira Code', monospace;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Language Badge */
+.language-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #3b82f6, #10b981, #8b5cf6);
+  background-size: 200% 200%;
+  color: #fff;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  animation: gradientBG 3s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.language-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Card 3D */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(50px);
+}
+
+.card-3d.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-3d:hover {
+  transform: translateY(-10px) rotateX(5deg) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+}
+
+/* Skill Icon */
+.skill-icon {
+  transition: all 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section Scroll Animations */
+.section {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Language Flag (if needed) */
+.language-flag {
+  width: 24px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline (Experience) */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 3px solid #0f172a;
+}
+
+.timeline-item:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 25px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background: #334155;
+}
+
+.timeline-item:last-child:after {
+  display: none;
 }

@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "brand": "ALI YAHYAOUI",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis <1>{{name}}</1>",
+    "subtitle": "Ingénieur Logiciel",
+    "description": "Je conçois et développe des applications web performantes et évolutives en utilisant des technologies de pointe et des principes solides de conception de systèmes.",
+    "cta": {
+      "contact": "Contactez-moi",
+      "download": "Télécharger le CV"
+    },
+    "imageAlt": "Photo de profil professionnelle"
+  },
+  "about": {
+    "heading": "À propos de moi",
+    "languages": {
+      "title": "Langues",
+      "english": "Anglais (courant)",
+      "arabic": "Arabe (langue maternelle)",
+      "french": "Français (professionnel)"
+    },
+    "education": {
+      "title": "Éducation",
+      "degree": "Licence en informatique",
+      "university": "{{school}}، {{years, digits}}",
+      "universitySchool": "Université libanaise",
+      "highschool": "Lycée HH",
+      "highschoolDetails": "{{track}}، {{years, digits}}",
+      "track": "Secondaire général, sciences de la vie"
+    },
+    "methods": {
+      "title": "Méthodologies",
+      "agile": "Développement Agile",
+      "microservices": "Architecture microservices",
+      "tdd": "Développement piloté par les tests"
+    },
+    "description": "Je suis un ingénieur logiciel expérimenté avec un bilan éprouvé dans le développement de systèmes back-end robustes et de fonctionnalités de sites Web pour de grands clients. Reconnu pour ma capacité d’apprentissage rapide et mon esprit d’équipe exceptionnel, j’excelle dans les environnements dynamiques en fournissant des solutions logicielles de haute qualité."
+  },
+  "skills": {
+    "heading": "Compétences Techniques",
+    "frontend": {
+      "title": "Développement Frontend",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "javascript": "JavaScript",
+      "typeScript": "TypeScript",
+      "angular": "Angular",
+      "react": "React",
+      "primeNg": "PrimeNG",
+      "jsp": "JSP",
+      "jsf": "JSF",
+      "tailwindCss": "Tailwind CSS"
+    },
+    "backend": {
+      "title": "Développement Backend",
+      "java": "Java",
+      "springBoot": "Spring Boot",
+      "hibernate": "Hibernate",
+      "restApis": "REST APIs",
+      "microservices": "Microservices",
+      "jpa": "JPA",
+      "nodeJs": "Node.js",
+      "express": "Express",
+      "graphql": "GraphQL"
+    },
+    "database": {
+      "title": "Bases de données et DevOps",
+      "oracle": "Oracle",
+      "mySql": "MySQL",
+      "plSql": "PL/SQL",
+      "mongoDb": "MongoDB",
+      "postgreSql": "PostgreSQL",
+      "docker": "Docker",
+      "kubernetes": "Kubernetes",
+      "aws": "AWS",
+      "ciCd": "CI/CD"
+    }
+  },
+  "experience": {
+    "heading": "Expérience Professionnelle",
+    "present": "Présent",
+    "item1": {
+      "title": "Développeur Full Stack de niveau intermédiaire",
+      "period": "{{start, digits}} – Présent",
+      "company": "{{company}} | {{period}}",
+      "stack": "Java, JSF, Spring et Hibernate",
+      "database": "base de données Oracle",
+      "architecture": "architecture microservices",
+      "frontend": "Angular",
+      "methodology": "Agile",
+      "tools": "outils de développement",
+      "clients": "Pearson, Disney et L'Oréal",
+      "p1": "Développé et maintenu l'application IPM Suite en améliorant les fonctionnalités principales avec <1>{{stack}}</1>, et un travail approfondi sur <1>{{database}}</1>.",
+      "p2": "Mené la migration des modules hérités vers une <1>{{architecture}}</1> avec <1>{{frontend}}</1>, améliorant évolutivité et performance.",
+      "p3": "Conçu, architecturé et implémenté des systèmes critiques et des interfaces utilisateur performantes.",
+      "p4": "Contributeur actif aux cérémonies <1>{{methodology}}</1>, améliorant les pratiques de l'équipe et animant des sessions de partage de connaissances.",
+      "p5": "Dirigé des initiatives de recherche, introduit de nouveaux <1>{{tools}}</1> et élevé les standards de codage.",
+      "p6": "Supporté des clients de premier plan comme <2>{{clients}}</2>, garantissant intégrité et confidentialité des données."
+    },
+    "item2": {
+      "title": "Développeur Front-End",
+      "year": "{{year, digits}}",
+      "company": "{{company}} | {{year}}",
+      "tech": "React.js",
+      "ui": "interfaces utilisateur dynamiques",
+      "responsive": "design réactif",
+      "p1": "Réalisation d'une plateforme d’apprentissage en ligne, acquérant une expérience pratique en <1>{{tech}}</1>. Développé <1>{{ui}}</1>, géré l'état avec React hooks et assuré <1>{{responsive}}</1>."
+    },
+    "item3": {
+      "period": "{{start}} – Présent",
+      "company": "{{role}} | {{period, digits}}",
+      "title": "Développeur Indépendant",
+      "p1": "Dirigé la conception et la livraison d’un agent conversationnel IA à grande échelle, automatisant des flux complexes et renforçant l’engagement utilisateur sur plusieurs plateformes.",
+      "p2": "Conçu et développé un tableau de bord administratif robuste pour une PME, permettant le suivi en temps réel des enregistrements, paiements et livraisons—optimisant l’efficacité opérationnelle et la visibilité des données."
+    }
+  },
+  "projects": {
+    "heading": "Projets phares",
+    "item1": {
+      "title": "Amélioration d'IPM Suite",
+      "description": "Système de gestion des droits d'entreprise avec architecture microservices",
+      "tags": {
+        "java": "Java",
+        "jsf": "JSF",
+        "spring": "Spring",
+        "hibernate": "Hibernate",
+        "oracle": "Oracle",
+        "microservices": "Microservices"
+      },
+      "category": "Application d'entreprise",
+      "button": "Détails"
+    },
+    "item2": {
+      "title": "Migration vers les microservices",
+      "description": "Modernisation du système hérité avec frontend Angular",
+      "tags": {
+        "angular": "Angular",
+        "springBoot": "Spring Boot",
+        "docker": "Docker",
+        "kubernetes": "Kubernetes",
+        "rest": "REST",
+        "oauth2": "OAuth2"
+      },
+      "category": "Architecture du système",
+      "button": "Détails"
+    },
+    "item3": {
+      "title": "Tableau de bord d'analyse de données",
+      "description": "Plateforme d'intelligence d'affaires en temps réel",
+      "tags": {
+        "react": "React",
+        "typeScript": "TypeScript",
+        "nodeJs": "Node.js",
+        "mongoDb": "MongoDB",
+        "webSockets": "WebSockets",
+        "d3": "D3.js"
+      },
+      "category": "Visualisation de données",
+      "button": "Détails"
+    }
+  },
+  "contact": {
+    "heading": "Contactez‐moi",
+    "infoTitle": "Informations de contact",
+    "email": "ali.yehiawii@gmail.com",
+    "phone": "+{{phone, digits}}",
+    "location": "Saint-Étienne – France",
+    "form": {
+      "label": {
+        "name": "Nom complet",
+        "email": "Adresse e-mail",
+        "subject": "Sujet",
+        "message": "Message"
+      },
+      "button": "Envoyer le message"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year, digits}} {{brand}}",
+    "builtWith": "Construit avec {{heart}} et des technologies web modernes"
+  }
+}
