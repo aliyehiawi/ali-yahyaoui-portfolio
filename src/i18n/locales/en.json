@@ -168,12 +168,17 @@
     "heading": "Get In Touch",
     "infoTitle": "Contact Information",
     "email": "ali.yehiawii@gmail.com",
-    "phone": "+{{phone, digits}}",
+    "phoneRaw": "96178962143",
     "location": "Saint-Étienne, France",
+    "cta": {
+      "heading": "Ready to take your digital presence to the next level?",
+      "subheading": "Reach out to me today and let's discuss how I can help you achieve your goals.",
+      "button": "Let's get in touch"
+    },
+    "copied": "Copied!",
+    "copyEmail": "Copy email",
     "form": {
       "label": {
-        "name": "Full Name",
-        "email": "Email Address",
         "subject": "Subject",
         "message": "Message"
       },
@@ -181,7 +186,11 @@
     }
   },
   "footer": {
+    "contactTitle": "Contact",
+    "linksTitle": "Quick Links",
+    "builtWithTitle": "Built With",
+    "builtWith": "Built with {{heart}} and modern web technologies",
     "copyright": "© {{year, digits}} {{brand}}",
-    "builtWith": "Built with {{heart}} and modern web technologies"
+    "rightsReserved": "All rights reserved."
   }
 }

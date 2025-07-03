@@ -166,23 +166,32 @@
     }
   },
   "contact": {
-    "heading": "Contactez‐moi",
+    "heading": "Contactez-moi",
     "infoTitle": "Informations de contact",
     "email": "ali.yehiawii@gmail.com",
-    "phone": "+{{phone, digits}}",
-    "location": "Saint-Étienne – France",
+    "phoneRaw": "96178962143",
+    "location": "Saint-Étienne, France",
+    "cta": {
+      "heading": "Prêt à donner un nouvel élan à votre présence numérique ?",
+      "subheading": "Contactez-moi dès aujourd'hui et discutons de la manière dont je peux vous aider à atteindre vos objectifs.",
+      "button": "Entrons en contact"
+    },
+    "copied": "Copié !",
+    "copyEmail": "Copier l’email",
     "form": {
       "label": {
-        "name": "Nom complet",
-        "email": "Adresse e-mail",
-        "subject": "Sujet",
+        "subject": "Objet",
         "message": "Message"
       },
       "button": "Envoyer le message"
     }
   },
   "footer": {
+    "contactTitle": "Contact",
+    "linksTitle": "Liens rapides",
+    "builtWithTitle": "Réalisé avec",
+    "builtWith": "Réalisé avec {{heart}} et des technologies web modernes",
     "copyright": "© {{year, digits}} {{brand}}",
-    "builtWith": "Construit avec {{heart}} et des technologies web modernes"
+    "rightsReserved": "Tous droits réservés."
   }
 }

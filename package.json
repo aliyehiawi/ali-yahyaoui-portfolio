@@ -2,7 +2,6 @@
   "name": "ali-yahyaoui-portfolio",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -10,9 +9,10 @@
     "lint": "next lint",
     "test": "jest --watch"
   },
-
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@react-three/drei": "^10.4.2",
+    "@react-three/fiber": "^9.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -27,26 +27,33 @@
     "vanilla-tilt": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-
   "devDependencies": {
+    "@types/node": "^20.11.1",
+    "@types/react": "^19.0.35",
+    "@types/react-dom": "^19.0.17",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.1.0",
     "jest": "^30.0.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.8.3",
-    "@types/node": "^20.11.1",
-    "@types/react": "^19.0.35",
-    "@types/react-dom": "^19.0.17"
+    "typescript": "^5.8.3"
   },
-
   "eslintConfig": {
-    "extends": ["next/core-web-vitals"]
+    "extends": [
+      "next/core-web-vitals"
+    ]
   },
-
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
