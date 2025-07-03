@@ -7,10 +7,14 @@ const TimelineItem = ({ title, company, paragraphs }) => {
         <h3 className="text-xl font-semibold text-primary">{title}</h3>
         <span className="text-gray-400">{company}</span>
       </div>
+
       <div className="text-gray-300 space-y-4">
-        {paragraphs.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+        {paragraphs.map((p, i) => {
+          if (React.isValidElement(p)) {
+            return React.cloneElement(p, { key: i });
+          }
+          return <p key={i}>{p}</p>;
+        })}
       </div>
     </div>
   );

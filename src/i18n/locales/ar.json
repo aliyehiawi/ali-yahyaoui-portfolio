@@ -166,14 +166,19 @@
   },
   "contact": {
     "heading": "تواصل معي",
-    "infoTitle": "معلومات التواصل",
+    "infoTitle": "معلومات الاتصال",
     "email": "ali.yehiawii@gmail.com",
-    "phone": "+{{phone, digits}}",
+    "phoneRaw": "96178962143",
     "location": "سانت-إتيان، فرنسا",
+    "cta": {
+      "heading": "هل أنت مستعد للارتقاء بحضورك الرقمي؟",
+      "subheading": "تواصل معي اليوم ولنناقش كيف يمكنني مساعدتك في تحقيق أهدافك.",
+      "button": "دعنا نتواصل"
+    },
+    "copied": "تم النسخ!",
+    "copyEmail": "نسخ البريد الإلكتروني",
     "form": {
       "label": {
-        "name": "الاسم الكامل",
-        "email": "البريد الإلكتروني",
         "subject": "الموضوع",
         "message": "الرسالة"
       },
@@ -181,7 +186,11 @@
     }
   },
   "footer": {
+    "contactTitle": "اتصل",
+    "linksTitle": "روابط سريعة",
+    "builtWithTitle": "بُني باستخدام",
+    "builtWith": "بُني باستخدام {{heart}} وتقنيات الويب الحديثة",
     "copyright": "© {{year, digits}} {{brand}}",
-    "builtWith": "تم بناؤه باستخدام {{heart}} وتقنيات ويب حديثة"
+    "rightsReserved": "جميع الحقوق محفوظة."
   }
 }

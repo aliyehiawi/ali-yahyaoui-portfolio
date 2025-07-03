@@ -5,8 +5,8 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import Background3D from "./components/Background3D";
+import AnimatedContactSection from "./components/AnimatedContactSection";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Skills />
       <Experience />
       <Projects />
-      <Contact />
+      <AnimatedContactSection />
     </Layout>
   );
 }

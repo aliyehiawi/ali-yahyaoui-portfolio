@@ -1,7 +1,8 @@
+// src/components/Hero.jsx
 'use client';
 
 import { useTranslation, Trans } from 'react-i18next';
-import '../index.css';          // already in page.tsx—remove if duplicated
+import '../index.css'; // already in page.tsx—remove if duplicated
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -29,17 +30,11 @@ export default function Hero() {
           {t('hero.description')}
         </p>
 
-        <div className="flex space-x-4">
-          <a
-            href="#contact"
-            className="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition transform hover:scale-105 shadow-lg"
-          >
-            {t('hero.cta.contact')}
-          </a>
+        <div className="flex">
           <a
             href="/assets/Ali Yahyaoui CV.pdf"
             download="Ali Yahyaoui CV.pdf"
-            className="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg transition transform hover:scale-105 shadow-lg flex items-center"
+            className="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg transition transform hover:scale-105 shadow-lg inline-flex items-center"
           >
             <i className="fas fa-download mr-2" />
             {t('hero.cta.download')}
@@ -47,10 +42,11 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* ───────── Right: Profile Image ───────── */}
       <div className="md:w-1/2 flex justify-center">
         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl transform transition hover:scale-105 hover:shadow-2xl">
           <img
-            src="/assets/images/profile.jpg"          
+            src="/assets/images/profile.jpg"
             alt={t('hero.imageAlt')}
             className="w-full h-full object-cover"
           />
