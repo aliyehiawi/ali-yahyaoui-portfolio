@@ -23,15 +23,15 @@
       "title": "Languages",
       "english": "English (Fluent)",
       "arabic": "Arabic (Native)",
-      "french": "French (Professional)"
+      "french": "French (Intermediate)"
     },
     "education": {
       "title": "Education",
       "degree": "Computer Science Degree",
-      "university": "{{school}}، {{years, digits}}",
+      "university": "{{school}}, {{years, digits}}",
       "universitySchool": "Lebanese University",
       "highschool": "HH High School",
-      "highschoolDetails": "{{track}}، {{years, digits}}",
+      "highschoolDetails": "{{track}}, {{years, digits}}",
       "track": "General Secondary, Life Science"
     },
     "methods": {
