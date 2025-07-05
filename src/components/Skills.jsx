@@ -41,7 +41,7 @@ const Skills = () => {
               t("skills.backend.jpa"),
               t("skills.backend.nodeJs"),
               t("skills.backend.express"),
-              t("skills.backend.graphql")
+              // t("skills.backend.graphql")
             ]}
           />
 
@@ -55,9 +55,9 @@ const Skills = () => {
               t("skills.database.mongoDb"),
               t("skills.database.postgreSql"),
               t("skills.database.docker"),
-              t("skills.database.kubernetes"),
-              t("skills.database.aws"),
-              t("skills.database.ciCd")
+              // t("skills.database.kubernetes"),
+              // t("skills.database.aws"),
+              // t("skills.database.ciCd")
             ]}
           />
         </div>

@@ -23,15 +23,15 @@
       "title": "Langues",
       "english": "Anglais (courant)",
       "arabic": "Arabe (langue maternelle)",
-      "french": "Français (professionnel)"
+      "french": "Français (Intermédiaire)"
     },
     "education": {
       "title": "Éducation",
       "degree": "Licence en informatique",
-      "university": "{{school}}، {{years, digits}}",
+      "university": "{{school}}, {{years, digits}}",
       "universitySchool": "Université libanaise",
       "highschool": "Lycée HH",
-      "highschoolDetails": "{{track}}، {{years, digits}}",
+      "highschoolDetails": "{{track}}, {{years, digits}}",
       "track": "Secondaire général, sciences de la vie"
     },
     "methods": {

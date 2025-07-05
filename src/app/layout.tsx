@@ -6,8 +6,8 @@ import Script from 'next/script';
  * (Next automatically injects <title> & <meta description> into <head>)
  */
 export const metadata = {
-  title: 'ALI YAHYAOUI',
-  description: 'ALI YAHYAOUI Portfolio',
+  title: 'Ali Yahyaoui',
+  description: 'Ali Yahyaoui Portfolio',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
