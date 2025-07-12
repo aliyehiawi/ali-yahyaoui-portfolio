@@ -16,7 +16,7 @@ function App() {
       <About />
       <Skills />
       <Experience />
-      <Projects />
+      {/* <Projects /> */}
       <AnimatedContactSection />
     </Layout>
   );

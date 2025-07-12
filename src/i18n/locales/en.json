@@ -23,7 +23,7 @@
       "title": "Languages",
       "english": "English (Fluent)",
       "arabic": "Arabic (Native)",
-      "french": "French (Intermediate)"
+      "french": "French (Beginner)"
     },
     "education": {
       "title": "Education",
@@ -173,8 +173,12 @@
     "cta": {
       "heading": "Ready to take your digital presence to the next level?",
       "subheading": "Reach out to me today and let's discuss how I can help you achieve your goals.",
-      "button": "Let's get in touch"
+      "button": "Let's get in touch",
+      "sending": "Sending...",
+      "thankyou": "Thanks! I'll be in touch soon."
     },
+    "or": "— or —",
+    "emailDirectly": "Email me directly",
     "copied": "Copied!",
     "copyEmail": "Copy email",
     "form": {
