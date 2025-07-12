@@ -23,7 +23,7 @@
       "title": "Langues",
       "english": "Anglais (courant)",
       "arabic": "Arabe (langue maternelle)",
-      "french": "Français (Intermédiaire)"
+      "french": "Français (débutant)"
     },
     "education": {
       "title": "Éducation",
@@ -174,8 +174,12 @@
     "cta": {
       "heading": "Prêt à donner un nouvel élan à votre présence numérique ?",
       "subheading": "Contactez-moi dès aujourd'hui et discutons de la manière dont je peux vous aider à atteindre vos objectifs.",
-      "button": "Entrons en contact"
+      "button": "Entrons en contact",
+      "sending": "Envoi en cours...",
+      "thankyou": "Merci ! Je vous recontacterai bientôt."
     },
+    "or": "— ou —",
+    "emailDirectly": "M'envoyer un email directement",
     "copied": "Copié !",
     "copyEmail": "Copier l’email",
     "form": {

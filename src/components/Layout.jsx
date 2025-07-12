@@ -13,8 +13,9 @@ const Layout = ({ children }) => {
   // Email copy-to-clipboard state
   const [copied, setCopied] = useState(false);
 
-  // Sections for nav (now including Contact)
-  const sections = ["about", "skills", "experience", "projects", "contact"];
+  // Sections for nav 
+  // const sections = ["about", "skills", "experience", "projects", "contact"];
+  const sections = ["about", "skills", "experience", "contact"];
   const langs = [
     { code: "en", label: "En" },
     { code: "ar", label: "Ar" },

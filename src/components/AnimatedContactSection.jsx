@@ -1,19 +1,19 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function AnimatedContactSection() {
   const mountRef = useRef(null);
   const { t } = useTranslation();
-  const mailto = 'mailto:ali.yehiawii@gmail.com';
+  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const THREE = window.THREE;
     const container = mountRef.current;
     const { clientWidth: width, clientHeight: height } = container;
 
-    // ─── SETUP ────────────────────────────────────────────
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
     camera.position.set(3, 3, 3);
@@ -24,13 +24,9 @@ export default function AnimatedContactSection() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
-    // ─── LIGHT ─────────────────────────────────────────────
     scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-
-    // ─── GRID ──────────────────────────────────────────────
     scene.add(new THREE.GridHelper(10, 10, 0x222222, 0x222222));
 
-    // ─── WIREFRAME CUBE ───────────────────────────────────
     const boxGeo = new THREE.BoxGeometry(1.5, 1.5, 1.5);
     const cubeMat = new THREE.MeshBasicMaterial({
       color: 0x3b82f6,
@@ -41,7 +37,6 @@ export default function AnimatedContactSection() {
     const cube = new THREE.Mesh(boxGeo, cubeMat);
     scene.add(cube);
 
-    // ─── PARTICLES “SNOW” ─────────────────────────────────
     const count = 800;
     const partGeo = new THREE.BufferGeometry();
     const pos = new Float32Array(count * 3);
@@ -59,7 +54,6 @@ export default function AnimatedContactSection() {
     });
     scene.add(new THREE.Points(partGeo, partMat));
 
-    // ─── ANIMATION LOOP ───────────────────────────────────
     let frameId;
     const animate = () => {
       frameId = requestAnimationFrame(animate);
@@ -74,7 +68,6 @@ export default function AnimatedContactSection() {
     };
     animate();
 
-    // ─── HANDLE RESIZE ───────────────────────────────────
     const onResize = () => {
       const w = container.clientWidth;
       const h = container.clientHeight;
@@ -84,7 +77,6 @@ export default function AnimatedContactSection() {
     };
     window.addEventListener('resize', onResize);
 
-    // ─── CLEANUP ──────────────────────────────────────────
     return () => {
       cancelAnimationFrame(frameId);
       window.removeEventListener('resize', onResize);
@@ -98,46 +90,98 @@ export default function AnimatedContactSection() {
   }, []);
 
   return (
-    <section
-      id="animated-contact"
-      className="relative h-screen overflow-visible bg-black"
-    >
-      {/* three.js canvas */}
+    <section id="animated-contact" className="relative h-screen overflow-visible bg-black">
       <div ref={mountRef} className="absolute inset-0" />
 
-      {/* content overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 overflow-visible">
-        <h2
-          className="
-            text-4xl md:text-5xl font-bold text-white mb-4
-            gradient-text leading-snug
-          "
-        >
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 py-1 gradient-text leading-snug">
           {t('contact.cta.heading')}
         </h2>
         <p className="text-gray-300 mb-6 max-w-2xl">
           {t('contact.cta.subheading')}
         </p>
 
-        {/* → the NEW neon-gradient 3D button */}
-        <button
-          onClick={() => (window.location.href = mailto)}
-          className="
-            relative inline-block px-10 py-4
-            rounded-xl font-bold text-white
-            bg-gradient-to-r from-blue-500 via-teal-400 to-purple-600
-            bg-[length:200%_200%] animate-gradient-x
-            shadow-lg shadow-blue-500/50
-            border-2 border-transparent
-            focus:outline-none focus:ring-4 focus:ring-blue-400/40
-            transform transition-all duration-300
-            [perspective:800px] hover:rotate-x-3 hover:rotate-y-3 hover:scale-105
-            hover:shadow-2xl hover:shadow-blue-500/75
-            hover:animate-glow-pulse
-          "
-        >
-          {t('contact.cta.button')}
-        </button>
+        {/* Contact Form */}
+        {!submitted ? (
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setIsSubmitting(true);
+              
+              const formData = new FormData(e.target);
+              
+              try {
+                const response = await fetch('https://formspree.io/f/mblynvld', {
+                  method: 'POST',
+                  body: formData,
+                  headers: {
+                    'Accept': 'application/json'
+                  }
+                });
+                
+                if (response.ok) {
+                  setSubmitted(true);
+                } else {
+                  console.error('Form submission failed');
+                  alert('There was an error submitting the form. Please try again.');
+                }
+              } catch (error) {
+                console.error('Form submission error:', error);
+                alert('There was an error submitting the form. Please try again.');
+              } finally {
+                setIsSubmitting(false);
+              }
+            }}
+            className="flex flex-col gap-4 w-full max-w-md text-left"
+          >
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Your name"
+              className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Your email"
+              className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <textarea
+              name="message"
+              required
+              placeholder="Your message"
+              rows={5}
+              className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-gradient-to-r from-blue-500 via-teal-400 to-purple-600 px-6 py-3 rounded-xl text-white font-bold shadow-lg hover:scale-105 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? t('contact.cta.sending') : t('contact.cta.button')}
+            </button>
+          </form>
+        ) : (
+          <p className="text-green-400 font-semibold mt-6">{t('contact.cta.thankyou')}</p>
+        )}
+
+        {/* Email directly option */}
+        {!submitted && (
+          <div className="mt-6 text-center">
+            <p className="text-gray-400 mb-3">{t('contact.or')}</p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ali.yehiawii@gmail.com&su=Hello from your portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              <i className="fas fa-envelope mr-2"></i>
+              {t('contact.emailDirectly')}
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

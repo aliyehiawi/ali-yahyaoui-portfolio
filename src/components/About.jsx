@@ -65,7 +65,7 @@ const About = () => {
               <div className="space-y-2 text-gray-300">
                 <p>{t("about.methods.agile")}</p>
                 <p>{t("about.methods.microservices")}</p>
-                <p>{t("about.methods.tdd")}</p>
+                {/* <p>{t("about.methods.tdd")}</p> */}
               </div>
             </article>
 
