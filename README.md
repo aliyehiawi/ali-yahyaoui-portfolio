@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Ali Yahyaoui - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing my skills, experience, and projects as a Software Engineer.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Multilingual Support**: English, Arabic, and French
+- **3D Background Animation**: Interactive Three.js background
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Smooth Animations**: GSAP-powered scroll animations
+- **Contact Form**: Formspree integration for easy communication
+- **Modern Tech Stack**: React, Next.js, TypeScript, Tailwind CSS
+- **Performance Optimized**: Fast loading and smooth interactions
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19, Next.js 15, TypeScript
+- **Styling**: Tailwind CSS, CSS3
+- **Animations**: GSAP, Three.js, Vanilla Tilt
+- **Internationalization**: i18next, react-i18next
+- **Form Handling**: Formspree
+- **Icons**: Font Awesome
+- **Fonts**: Inter, Fira Code
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/aliyehiawi/ali-yahyaoui-portfolio.git
+   cd ali-yahyaoui-portfolio
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Set up environment variables**
+   Create a `.env.local` file:
+   ```env
+   NEXT_PUBLIC_FORMSPREE_ID=your_formspree_form_id
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Project Structure
 
-### `npm run eject`
+```
+src/
+├── app/                    # Next.js app directory
+├── components/             # React components
+│   ├── Layout.jsx         # Main layout with navigation
+│   ├── Hero.jsx           # Hero section
+│   ├── About.jsx          # About section
+│   ├── Skills.jsx         # Skills section
+│   ├── Experience.jsx     # Experience timeline
+│   ├── Projects.jsx       # Projects showcase
+│   └── AnimatedContactSection.jsx # Contact form
+├── hooks/                  # Custom React hooks
+├── i18n/                   # Internationalization
+│   └── locales/           # Translation files
+└── index.css              # Global styles
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌐 Internationalization
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The portfolio supports three languages:
+- **English** (en) - Default
+- **Arabic** (ar) - RTL support
+- **French** (fr)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Translation files are located in `src/i18n/locales/`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Customization
 
-## Learn More
+### Colors & Styling
+- Primary colors are defined in `tailwind.config.js`
+- Gradient text uses CSS custom properties
+- 3D card effects are in `src/index.css`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Content
+- Update personal information in translation files
+- Modify project details in `Projects.jsx`
+- Update experience in `Experience.jsx`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contact Form
+- Replace Formspree form ID in `AnimatedContactSection.jsx`
+- Update email and phone in translation files
 
-### Code Splitting
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The portfolio is fully responsive with breakpoints:
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
 
-### Analyzing the Bundle Size
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically
 
-### Making a Progressive Web App
+### Netlify
+1. Build the project: `npm run build`
+2. Deploy the `out` folder to Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Other Platforms
+The project works with any static hosting service.
 
-### Advanced Configuration
+## 🔧 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm test` - Run tests
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is private and proprietary. All rights reserved.
 
-### `npm run build` fails to minify
+## 🤝 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Email**: ali.yehiawii@gmail.com
+- **LinkedIn**: [Ali Yehiawi](https://www.linkedin.com/in/ali-yehiawi-a49a6421b)
+- **GitHub**: [aliyehiawi](https://github.com/aliyehiawi)
+
+---
+
+Built with ❤️ using modern web technologies

@@ -7,18 +7,23 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Background3D from "./components/Background3D";
 import AnimatedContactSection from "./components/AnimatedContactSection";
+import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
-    <Layout>
-      <Background3D />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      {/* <Projects /> */}
-      <AnimatedContactSection />
-    </Layout>
+    <ErrorBoundary>
+      <Layout>
+        <Background3D />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        {/* <Projects /> */}
+        <AnimatedContactSection />
+        <ScrollToTop />
+      </Layout>
+    </ErrorBoundary>
   );
 }
 

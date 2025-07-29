@@ -85,7 +85,7 @@
   "experience": {
     "heading": "Professional Experience",
     "item1": {
-      "title": "Mid-Level Full Stack Developer",
+      "title": "Senior Full Stack Developer",
       "period": "{{start, digits}} – Present",
       "company": "{{company}} | {{period}}",
       "stack": "Java, JSF, Spring, and Hibernate",
@@ -103,6 +103,25 @@
       "p6": "Delivered diagnostic queries, data fixes, and support for high-profile clients including <2>{{clients}}</2>, ensuring data integrity and confidentiality."
     },
     "item2": {
+      "title": "Part-Time Full Stack Developer",
+      "period": "2025 – Present",
+      "company": "{{company}} | {{period}}",
+      "systems": "Scan & Stock, Coompy, and PrestaShop",
+      "auth": "Keycloak",
+      "tech": "Java, Angular, and PHP",
+      "p1": "Responsible for the maintenance and operational support of several core systems, including <1>{{systems}}</1>. Ensured their stability, performance, and seamless integration within the business workflow.",
+      "p2": "Worked extensively with <1>{{auth}}</1> to manage user authentication and access control, enhancing system security and efficiency.",
+      "p3": "These platforms were developed using <1>{{tech}}</1>, and I actively collaborated with development teams to troubleshoot issues, optimize functionality, and support system upgrades.",
+      "p4": "My role required a strong technical foundation and a proactive approach to system reliability, user support, and continuous improvement across both backend services and user-facing applications."
+    },
+    "item3": {
+      "title": "Freelance Developer",
+      "period": "{{start}} – Present",
+      "company": "{{role}} | {{period, digits}}",
+      "p1": "Led the end-to-end design and delivery of a scalable AI-driven conversational agent, automating complex workflows and elevating user engagement across multiple platforms.",
+      "p2": "Architected and developed a robust administrative dashboard for a mid-size enterprise, enabling real-time tracking of records, payments, and deliveries—boosting operational efficiency and data visibility."
+    },
+    "item4": {
       "title": "Front-End Developer",
       "year": "{{year, digits}}",
       "company": "{{company}} | {{year}}",
@@ -110,13 +129,6 @@
       "ui": "dynamic user interfaces",
       "responsive": "responsive design",
       "p1": "Completed a full-scale e-learning platform project, gaining hands-on experience in <1>{{tech}}</1>. Developed <1>{{ui}}</1>, managed state with React hooks, and ensured <1>{{responsive}}</1> across devices."
-    },
-    "item3": {
-      "period": "{{start}} – Present",
-      "company": "{{role}} | {{period, digits}}",
-      "title": "Freelance Developer",
-      "p1": "Led the end-to-end design and delivery of a scalable AI-driven conversational agent, automating complex workflows and elevating user engagement across multiple platforms.",
-      "p2": "Architected and developed a robust administrative dashboard for a mid-size enterprise, enabling real-time tracking of records, payments, and deliveries—boosting operational efficiency and data visibility."
     }
   },
   "projects": {
