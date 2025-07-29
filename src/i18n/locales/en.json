@@ -85,8 +85,8 @@
   "experience": {
     "heading": "Professional Experience",
     "item1": {
-      "title": "Senior Full Stack Developer",
-      "period": "{{start, digits}} – Present",
+      "title": "Software Engineer I (Junior) → Software Engineer III (Mid-level)",
+      "period": "{{start, digits}} – AUG 2025",
       "company": "{{company}} | {{period}}",
       "stack": "Java, JSF, Spring, and Hibernate",
       "database": "Oracle database",
@@ -115,13 +115,6 @@
       "p4": "My role required a strong technical foundation and a proactive approach to system reliability, user support, and continuous improvement across both backend services and user-facing applications."
     },
     "item3": {
-      "title": "Freelance Developer",
-      "period": "{{start}} – Present",
-      "company": "{{role}} | {{period, digits}}",
-      "p1": "Led the end-to-end design and delivery of a scalable AI-driven conversational agent, automating complex workflows and elevating user engagement across multiple platforms.",
-      "p2": "Architected and developed a robust administrative dashboard for a mid-size enterprise, enabling real-time tracking of records, payments, and deliveries—boosting operational efficiency and data visibility."
-    },
-    "item4": {
       "title": "Front-End Developer",
       "year": "{{year, digits}}",
       "company": "{{company}} | {{year}}",
@@ -129,6 +122,11 @@
       "ui": "dynamic user interfaces",
       "responsive": "responsive design",
       "p1": "Completed a full-scale e-learning platform project, gaining hands-on experience in <1>{{tech}}</1>. Developed <1>{{ui}}</1>, managed state with React hooks, and ensured <1>{{responsive}}</1> across devices."
+    },
+    "item4": {
+      "title": "Freelance Developer",
+      "company": "Self-Employed",
+      "p1": "Led the end-to-end design and delivery of a scalable AI-driven conversational agent, automating complex workflows and elevating user engagement across multiple platforms."
     }
   },
   "projects": {
