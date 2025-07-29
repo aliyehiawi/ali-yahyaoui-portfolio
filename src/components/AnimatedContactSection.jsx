@@ -137,22 +137,28 @@ export default function AnimatedContactSection() {
             <input
               type="text"
               name="name"
+              id="name"
               required
               placeholder="Your name"
+              aria-label="Your name"
               className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="email"
               name="email"
+              id="email"
               required
               placeholder="Your email"
+              aria-label="Your email"
               className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <textarea
               name="message"
+              id="message"
               required
               placeholder="Your message"
               rows={5}
+              aria-label="Your message"
               className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
             <button

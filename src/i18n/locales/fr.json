@@ -86,7 +86,7 @@
     "heading": "Expérience Professionnelle",
     "present": "Présent",
     "item1": {
-      "title": "Développeur Full Stack de niveau intermédiaire",
+      "title": "Développeur Full Stack Senior",
       "period": "{{start, digits}} – Présent",
       "company": "{{company}} | {{period}}",
       "stack": "Java, JSF, Spring et Hibernate",
@@ -104,6 +104,19 @@
       "p6": "Supporté des clients de premier plan comme <2>{{clients}}</2>, garantissant intégrité et confidentialité des données."
     },
     "item2": {
+      "title": "Développeur Full Stack à Temps Partiel",
+      "period": "2025 – Présent",
+      "company": "{{company}} | {{period}}",
+      "systems": "Scan & Stock, Coompy et PrestaShop",
+      "auth": "Keycloak",
+      "tech": "Java, Angular et PHP",
+      "p1": "Responsable de la maintenance et du support opérationnel de plusieurs systèmes principaux, incluant <1>{{systems}}</1>. Assuré leur stabilité, performance et intégration transparente dans le flux de travail.",
+      "p2": "Travaillé extensivement avec <1>{{auth}}</1> pour gérer l'authentification des utilisateurs et le contrôle d'accès, améliorant la sécurité et l'efficacité du système.",
+      "p3": "Ces plateformes ont été développées avec <1>{{tech}}</1>, et j'ai activement collaboré avec les équipes de développement pour résoudre les problèmes, optimiser les fonctionnalités et supporter les mises à jour.",
+      "p4": "Mon rôle nécessitait une base technique solide et une approche proactive pour la fiabilité du système, le support utilisateur et l'amélioration continue des services backend et des applications utilisateur."
+    },
+
+    "item4": {
       "title": "Développeur Front-End",
       "year": "{{year, digits}}",
       "company": "{{company}} | {{year}}",

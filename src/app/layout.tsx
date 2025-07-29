@@ -6,8 +6,55 @@ import Script from 'next/script';
  * (Next automatically injects <title> & <meta description> into <head>)
  */
 export const metadata = {
-  title: 'Ali Yahyaoui',
-  description: 'Ali Yahyaoui Portfolio',
+  title: 'Ali Yahyaoui - Software Engineer Portfolio',
+  description: 'Full Stack Software Engineer specializing in Java, Spring Boot, React, and microservices architecture. View my projects, experience, and get in touch.',
+  keywords: 'Software Engineer, Full Stack Developer, Java, Spring Boot, React, Microservices, Portfolio',
+  authors: [{ name: 'Ali Yahyaoui' }],
+  creator: 'Ali Yahyaoui',
+  publisher: 'Ali Yahyaoui',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ali-yahyaoui-portfolio.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Ali Yahyaoui - Software Engineer Portfolio',
+    description: 'Full Stack Software Engineer specializing in Java, Spring Boot, React, and microservices architecture.',
+    url: 'https://ali-yahyaoui-portfolio.vercel.app',
+    siteName: 'Ali Yahyaoui Portfolio',
+    images: [
+      {
+        url: '/assets/images/profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ali Yahyaoui - Software Engineer',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ali Yahyaoui - Software Engineer Portfolio',
+    description: 'Full Stack Software Engineer specializing in Java, Spring Boot, React, and microservices architecture.',
+    images: ['/assets/images/profile.jpg'],
+    creator: '@aliyehiawi',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -37,7 +84,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             App content (your <App /> tree) renders here  */}
         {children}
 
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <noscript>
+          <div className="min-h-screen flex items-center justify-center bg-black text-white">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold mb-4">JavaScript Required</h1>
+              <p className="text-gray-400">This portfolio requires JavaScript to function properly.</p>
+            </div>
+          </div>
+        </noscript>
 
         {/* External scripts – loaded early, before your React code runs */}
         <Script

@@ -8,8 +8,9 @@ const Experience = () => {
 
   // Localize your date ranges via the translation files
   const periodFadel = t("experience.item1.period", { start: 2022 });
-  const year8thGate = t("experience.item2.year",    { year: 2021 });
+  const periodPoyesis = t("experience.item2.period");
   const periodFreelance = t("experience.item3.period", { start: 2022 });
+  const year8thGate = t("experience.item4.year", { year: 2021 });
 
   const experiences = [
     {
@@ -59,26 +60,35 @@ const Experience = () => {
       ],
     },
     {
-      title:   t("experience.item2.title"),
+      title: t("experience.item2.title"),
       company: t("experience.item2.company", {
-        company: "8TH GATE",
-        year:    year8thGate,
+        company: "POYESIS",
+        period: periodPoyesis,
       }),
       paragraphs: [
         <Trans
           key="p1"
           i18nKey="experience.item2.p1"
           components={{ 1: <span className="text-primary" /> }}
-          values={{
-            tech:       t("experience.item2.tech"),
-            ui:         t("experience.item2.ui"),
-            responsive: t("experience.item2.responsive"),
-          }}
+          values={{ systems: t("experience.item2.systems") }}
         />,
+        <Trans
+          key="p2"
+          i18nKey="experience.item2.p2"
+          components={{ 1: <span className="text-primary" /> }}
+          values={{ auth: t("experience.item2.auth") }}
+        />,
+        <Trans
+          key="p3"
+          i18nKey="experience.item2.p3"
+          components={{ 1: <span className="text-primary" /> }}
+          values={{ tech: t("experience.item2.tech") }}
+        />,
+        <p key="p4">{t("experience.item2.p4")}</p>,
       ],
     },
     {
-      title:   t("experience.item3.title"),
+      title: t("experience.item3.title"),
       company: t("experience.item3.company", {
         role:   t("experience.item3.title"),
         period: periodFreelance,
@@ -86,6 +96,25 @@ const Experience = () => {
       paragraphs: [
         t("experience.item3.p1"),
         t("experience.item3.p2"),
+      ],
+    },
+    {
+      title: t("experience.item4.title"),
+      company: t("experience.item4.company", {
+        company: "8TH GATE",
+        year:    year8thGate,
+      }),
+      paragraphs: [
+        <Trans
+          key="p1"
+          i18nKey="experience.item4.p1"
+          components={{ 1: <span className="text-primary" /> }}
+          values={{
+            tech:       t("experience.item4.tech"),
+            ui:         t("experience.item4.ui"),
+            responsive: t("experience.item4.responsive"),
+          }}
+        />,
       ],
     },
   ];
