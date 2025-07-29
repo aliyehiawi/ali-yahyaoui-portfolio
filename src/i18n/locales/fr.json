@@ -86,8 +86,8 @@
     "heading": "Expérience Professionnelle",
     "present": "Présent",
     "item1": {
-      "title": "Développeur Full Stack Senior",
-      "period": "{{start, digits}} – Présent",
+      "title": "Ingénieur Logiciel I (Junior) → Ingénieur Logiciel III (Niveau intermédiaire)",
+      "period": "{{start, digits}} – AOÛT 2025",
       "company": "{{company}} | {{period}}",
       "stack": "Java, JSF, Spring et Hibernate",
       "database": "base de données Oracle",
@@ -115,22 +115,19 @@
       "p3": "Ces plateformes ont été développées avec <1>{{tech}}</1>, et j'ai activement collaboré avec les équipes de développement pour résoudre les problèmes, optimiser les fonctionnalités et supporter les mises à jour.",
       "p4": "Mon rôle nécessitait une base technique solide et une approche proactive pour la fiabilité du système, le support utilisateur et l'amélioration continue des services backend et des applications utilisateur."
     },
-
-    "item4": {
+    "item3": {
       "title": "Développeur Front-End",
       "year": "{{year, digits}}",
       "company": "{{company}} | {{year}}",
       "tech": "React.js",
       "ui": "interfaces utilisateur dynamiques",
       "responsive": "design réactif",
-      "p1": "Réalisation d'une plateforme d’apprentissage en ligne, acquérant une expérience pratique en <1>{{tech}}</1>. Développé <1>{{ui}}</1>, géré l'état avec React hooks et assuré <1>{{responsive}}</1>."
+      "p1": "Réalisation d'une plateforme d'apprentissage en ligne, acquérant une expérience pratique en <1>{{tech}}</1>. Développé <1>{{ui}}</1>, géré l'état avec React hooks et assuré <1>{{responsive}}</1>."
     },
-    "item3": {
-      "period": "{{start}} – Présent",
-      "company": "{{role}} | {{period, digits}}",
+    "item4": {
       "title": "Développeur Indépendant",
-      "p1": "Dirigé la conception et la livraison d’un agent conversationnel IA à grande échelle, automatisant des flux complexes et renforçant l’engagement utilisateur sur plusieurs plateformes.",
-      "p2": "Conçu et développé un tableau de bord administratif robuste pour une PME, permettant le suivi en temps réel des enregistrements, paiements et livraisons—optimisant l’efficacité opérationnelle et la visibilité des données."
+      "company": "Auto-Employé",
+      "p1": "Dirigé la conception et la livraison d'un agent conversationnel IA à grande échelle, automatisant des flux complexes et renforçant l'engagement utilisateur sur plusieurs plateformes."
     }
   },
   "projects": {
