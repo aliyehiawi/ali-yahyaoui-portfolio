@@ -85,7 +85,7 @@
   "experience": {
     "heading": "Professional Experience",
     "item1": {
-      "title": "Software Engineer I (Junior) → Software Engineer III (Mid-level)",
+      "title": "Software Engineer I (Junior) → Software Engineer III (Mid-level) → Product Architecture",
       "period": "{{start, digits}} – AUG 2025",
       "company": "{{company}} | {{period}}",
       "stack": "Java, JSF, Spring, and Hibernate",

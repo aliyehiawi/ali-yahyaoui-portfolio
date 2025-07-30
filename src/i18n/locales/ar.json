@@ -85,7 +85,7 @@
   "experience": {
     "heading": "الخبرة المهنية",
     "item1": {
-      "title": "مهندس برمجيات I (مبتدئ) → مهندس برمجيات III (متوسط المستوى)",
+      "title": "مهندس برمجيات I (مبتدئ) → مهندس برمجيات III (متوسط المستوى) → معمارية المنتج",
       "period": "{{start, digits}} – أغسطس 2025",
       "company": "{{company}} | {{period}}",
       "stack": "Java و JSF و Spring و Hibernate",
