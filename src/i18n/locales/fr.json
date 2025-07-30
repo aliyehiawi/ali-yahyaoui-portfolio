@@ -86,7 +86,7 @@
     "heading": "Expérience Professionnelle",
     "present": "Présent",
     "item1": {
-      "title": "Ingénieur Logiciel I (Junior) → Ingénieur Logiciel III (Niveau intermédiaire)",
+      "title": "Ingénieur Logiciel I (Junior) → Ingénieur Logiciel III (Niveau intermédiaire) → Architecture Produit",
       "period": "{{start, digits}} – AOÛT 2025",
       "company": "{{company}} | {{period}}",
       "stack": "Java, JSF, Spring et Hibernate",
