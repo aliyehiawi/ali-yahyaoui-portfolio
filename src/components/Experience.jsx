@@ -5,7 +5,6 @@ import TimelineItem from "./TimelineItem";
 const Experience = () => {
   const { t } = useTranslation();
 
-  // Localize your date ranges via the translation files
   const periodFadel = t("experience.item1.period", { start: 2022 });
   const periodPoyesis = t("experience.item2.period");
   const year8thGate = t("experience.item3.year", { year: 2021 });

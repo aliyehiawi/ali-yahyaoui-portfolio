@@ -11,10 +11,38 @@ const About = () => {
           {t("about.heading")}
         </h2>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Cards */}
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8">
+            <article className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-4">
+                  <i className="fas fa-graduation-cap text-4xl text-accent"></i>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2 text-accent">
+                    {t("about.education.masters")}
+                  </h3>
+                  <p className="text-gray-300 mb-2">
+                    <Trans
+                      i18nKey="about.education.mastersUniversity"
+                      values={{
+                        school1: t("about.education.mastersSchool1"),
+                        school2: t("about.education.mastersSchool2")
+                      }}
+                    />
+                  </p>
+                  <p className="text-gray-400 text-sm mb-3">
+                    {t("about.education.mastersYears")}
+                  </p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {t("about.education.mastersDescription")}
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {/* Languages Card */}
             <article className="bg-gray-800 p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold mb-4 text-primary">
                 {t("about.languages.title")}
@@ -26,7 +54,6 @@ const About = () => {
               </div>
             </article>
 
-            {/* Education Card */}
             <article className="bg-gray-800 p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold mb-4 text-primary">
                 {t("about.education.title")}
@@ -34,7 +61,7 @@ const About = () => {
               <p className="mb-2 font-medium">
                 {t("about.education.degree")}
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm">
                 <Trans
                   i18nKey="about.education.university"
                   values={{
@@ -46,7 +73,7 @@ const About = () => {
               <p className="mt-4 mb-2 font-medium">
                 {t("about.education.highschool")}
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm">
                 <Trans
                   i18nKey="about.education.highschoolDetails"
                   values={{
@@ -57,7 +84,6 @@ const About = () => {
               </p>
             </article>
 
-            {/* Methodologies Card */}
             <article className="bg-gray-800 p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold mb-4 text-primary">
                 {t("about.methods.title")}
@@ -65,13 +91,11 @@ const About = () => {
               <div className="space-y-2 text-gray-300">
                 <p>{t("about.methods.agile")}</p>
                 <p>{t("about.methods.microservices")}</p>
-                {/* <p>{t("about.methods.tdd")}</p> */}
               </div>
             </article>
 
           </div>
 
-          {/* About description */}
           <p className="text-lg text-gray-300 mb-6">{t("about.description")}</p>
         </div>
       </div>

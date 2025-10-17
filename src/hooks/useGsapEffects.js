@@ -1,4 +1,3 @@
-// src/hooks/useGsapEffects.js
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,9 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const useGsapEffects = () => {
   useEffect(() => {
-    // create a scoped context so we can cleanup easily
     const ctx = gsap.context(() => {
-      // Animate .section elements on scroll
       gsap.utils.toArray(".section").forEach((section) => {
         gsap.fromTo(
           section,
@@ -29,7 +26,6 @@ const useGsapEffects = () => {
         );
       });
 
-      // Animate .card-3d pop-in
       gsap.utils.toArray(".card-3d").forEach((card, i) => {
         gsap.fromTo(
           card,
@@ -48,7 +44,6 @@ const useGsapEffects = () => {
         );
       });
 
-      // VanillaTilt effect
       VanillaTilt.init(document.querySelectorAll(".card-3d"), {
         max: 15,
         speed: 400,
@@ -58,7 +53,7 @@ const useGsapEffects = () => {
     });
 
     return () => {
-      ctx.revert(); // kill all GSAP instances in this context
+      ctx.revert();
     };
   }, []);
 };

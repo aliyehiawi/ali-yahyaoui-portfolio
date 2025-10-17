@@ -1,4 +1,3 @@
-// src/components/Layout.jsx
 import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -8,13 +7,9 @@ const Layout = ({ children }) => {
   const { t } = useTranslation();
   useGsapEffects();
 
-  // Header menu state
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Email copy-to-clipboard state
   const [copied, setCopied] = useState(false);
 
-  // Sections for nav 
-  // const sections = ["about", "skills", "experience", "projects", "contact"];
   const sections = ["about", "skills", "experience", "contact"];
   const langs = [
     { code: "en", label: "En" },
@@ -22,19 +17,54 @@ const Layout = ({ children }) => {
     { code: "fr", label: "Fr" },
   ];
 
-  // Raw contact values (could be moved into your i18n JSON)
   const rawEmail = t("contact.email", {
     defaultValue: "ali.yehiawii@gmail.com",
   });
-  const rawPhone = t("contact.phoneRaw", { defaultValue: "96178962143" });
+  const rawPhone = t("contact.phoneRaw", { defaultValue: "33765776014" });
 
-  // Format "+96178962143" → "+961 78 962 143"
   const formattedPhone = useMemo(() => {
-    const country = rawPhone.slice(0, rawPhone.length - 8);
-    const rest = rawPhone.slice(-8);
-    const groups = rest.match(/(\d{2})(\d{3})(\d{3})/);
-    if (!groups) return rawPhone;
-    return `+${country} ${groups[1]} ${groups[2]} ${groups[3]}`;
+    if (!rawPhone) return '';
+    
+    const digits = rawPhone.replace(/\D/g, '');
+    const length = digits.length;
+    
+    const patterns = {
+      11: {
+        country: 2,
+        groups: [1, 2, 2, 2, 2]
+      },
+      12: {
+        country: 3,
+        groups: [2, 3, 3]
+      },
+      10: {
+        country: 1,
+        groups: [3, 3, 4]
+      }
+    };
+
+    const pattern = patterns[length];
+    
+    if (!pattern) {
+      return `+${digits}`;
+    }
+
+    const countryCode = digits.slice(0, pattern.country);
+    let remaining = digits.slice(pattern.country);
+    const parts = [countryCode];
+
+    for (const groupSize of pattern.groups) {
+      if (remaining.length >= groupSize) {
+        parts.push(remaining.slice(0, groupSize));
+        remaining = remaining.slice(groupSize);
+      }
+    }
+
+    if (remaining) {
+      parts.push(remaining);
+    }
+
+    return `+${parts.join(' ')}`;
   }, [rawPhone]);
 
   const handleCopyEmail = () => {
@@ -44,16 +74,13 @@ const Layout = ({ children }) => {
     });
   };
 
-  // Helper to map "contact" to the correct section id
   const hrefFor = (section) =>
     section === "contact" ? "#animated-contact" : `#${section}`;
 
   return (
     <>
-      {/* Header */}
       <header className="fixed w-full bg-black bg-opacity-90 backdrop-blur-sm z-50 shadow-lg">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Brand / Home */}
           <a
             href="#hero"
             className="text-2xl font-bold gradient-text hover:opacity-80 transition"
@@ -62,7 +89,6 @@ const Layout = ({ children }) => {
             {t("nav.brand")}
           </a>
 
-          {/* DESKTOP nav links */}
           <div className="hidden md:flex space-x-8">
             {sections.map((section) => (
               <a
@@ -75,7 +101,6 @@ const Layout = ({ children }) => {
             ))}
           </div>
 
-          {/* language picker + mobile toggle */}
           <div className="flex items-center space-x-4">
             <div className="hidden sm:flex space-x-2">
               {langs.map(({ code, label }) => (
@@ -102,7 +127,6 @@ const Layout = ({ children }) => {
         </nav>
       </header>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-6">
           {sections.map((section) => (
@@ -136,19 +160,15 @@ const Layout = ({ children }) => {
         </div>
       )}
 
-      {/* Main Content */}
       <main className="pt-24">{children}</main>
 
-      {/* Footer with contact info */}
       <footer className="bg-gray-900 text-gray-400 border-t border-gray-800">
         <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* ——— Contact ——— */}
           <div>
             <h4 className="text-white font-semibold mb-4">
               {t("footer.contactTitle", { defaultValue: "Contact" })}
             </h4>
             <ul className="space-y-3">
-              {/* Email with copy button */}
               <li className="flex items-center">
                 <i className="fas fa-envelope text-primary text-lg mr-3" />
                 <a
@@ -174,7 +194,6 @@ const Layout = ({ children }) => {
                   </span>
                 )}
               </li>
-              {/* Phone */}
               <li className="flex items-center">
                 <i className="fas fa-phone-alt text-primary text-lg mr-3" />
                 <a
@@ -184,7 +203,6 @@ const Layout = ({ children }) => {
                   {formattedPhone}
                 </a>
               </li>
-              {/* Location */}
               <li className="flex items-center">
                 <i className="fas fa-map-marker-alt text-primary text-lg mr-3" />
                 <span>{t("contact.location")}</span>
@@ -192,7 +210,6 @@ const Layout = ({ children }) => {
             </ul>
           </div>
 
-          {/* ——— Quick Links ——— */}
           <div>
             <h4 className="text-white font-semibold mb-4">
               {t("footer.linksTitle", { defaultValue: "Quick Links" })}
@@ -211,7 +228,6 @@ const Layout = ({ children }) => {
             </ul>
           </div>
 
-          {/* ——— Built With / Social ——— */}
           <div className="flex flex-col justify-between">
             <div>
               <h4 className="text-white font-semibold mb-4">
@@ -237,7 +253,7 @@ const Layout = ({ children }) => {
                 <i className="fab fa-github text-xl" />
               </a>
               <a
-                href="https://www.linkedin.com/in/ali-yehiawi-a49a6421b"
+                href="https://www.linkedin.com/in/ali-yahyaoui-a49a6421b"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -249,7 +265,6 @@ const Layout = ({ children }) => {
           </div>
         </div>
 
-        {/* bottom bar */}
         <div className="bg-gray-800 py-4">
           <p className="text-center text-sm">
             &copy; {new Date().getFullYear()} {t("nav.brand")}.{" "}

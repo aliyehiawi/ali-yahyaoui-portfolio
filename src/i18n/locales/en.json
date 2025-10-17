@@ -4,7 +4,6 @@
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
-    "projects": "Projects",
     "contact": "Contact"
   },
   "hero": {
@@ -12,7 +11,6 @@
     "subtitle": "Software Engineer",
     "description": "I architect and build high-performance, scalable web applications using cutting-edge technologies and robust system design principles.",
     "cta": {
-      "contact": "Contact Me",
       "download": "Download CV"
     },
     "imageAlt": "Professional profile picture"
@@ -27,6 +25,12 @@
     },
     "education": {
       "title": "Education",
+      "masters": "Master's in Cyber-Physical and Social Systems (CPS2)",
+      "mastersUniversity": "{{school1}} & {{school2}}, University of Lyon",
+      "mastersSchool1": "École des Mines de Saint-Étienne",
+      "mastersSchool2": "Université Jean Monnet",
+      "mastersYears": "2025 – Present",
+      "mastersDescription": "Designing and integrating intelligent cyber-physical systems that interface physical, social, and digital dimensions. Acquiring knowledge in IoT, Web & Mobile Applications, AI, Cloud & Edge Computing, Digital Twins, Cybersecurity, and Scientific Writing.",
       "degree": "Computer Science Degree",
       "university": "{{school}}, {{years, digits}}",
       "universitySchool": "Lebanese University",
@@ -37,8 +41,7 @@
     "methods": {
       "title": "Methodologies",
       "agile": "Agile Development",
-      "microservices": "Microservices Architecture",
-      "tdd": "Test-Driven Development"
+      "microservices": "Microservices Architecture"
     },
     "description": "I am an experienced Software Engineer with a proven track record in developing robust backend systems and website features for major clients. Known for rapid learning abilities and exceptional teamwork, I excel in fast-paced environments, delivering high-quality software solutions."
   },
@@ -52,6 +55,7 @@
       "typeScript": "TypeScript",
       "angular": "Angular",
       "react": "React",
+      "vueJs": "Vue.js",
       "primeNg": "PrimeNG",
       "jsp": "JSP",
       "jsf": "JSF",
@@ -60,14 +64,15 @@
     "backend": {
       "title": "Backend Development",
       "java": "Java",
+      "python": "Python",
+      "ruby": "Ruby",
       "springBoot": "Spring Boot",
       "hibernate": "Hibernate",
       "restApis": "REST APIs",
       "microservices": "Microservices",
       "jpa": "JPA",
       "nodeJs": "Node.js",
-      "express": "Express",
-      "graphql": "GraphQL"
+      "express": "Express"
     },
     "database": {
       "title": "Database & DevOps",
@@ -76,10 +81,7 @@
       "plSql": "PL/SQL",
       "mongoDb": "MongoDB",
       "postgreSql": "PostgreSQL",
-      "docker": "Docker",
-      "kubernetes": "Kubernetes",
-      "aws": "AWS",
-      "ciCd": "CI/CD"
+      "docker": "Docker"
     }
   },
   "experience": {
@@ -175,10 +177,8 @@
     }
   },
   "contact": {
-    "heading": "Get In Touch",
-    "infoTitle": "Contact Information",
     "email": "ali.yehiawii@gmail.com",
-    "phoneRaw": "96178962143",
+    "phoneRaw": "33765776014",
     "location": "Saint-Étienne, France",
     "cta": {
       "heading": "Ready to take your digital presence to the next level?",
@@ -187,17 +187,20 @@
       "sending": "Sending...",
       "thankyou": "Thanks! I'll be in touch soon."
     },
+    "form": {
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email",
+      "messagePlaceholder": "Your message",
+      "error": "There was an error submitting the form. Please try again.",
+      "nameRequired": "Please fill out this field.",
+      "emailRequired": "Please fill out this field.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Please fill out this field."
+    },
     "or": "— or —",
     "emailDirectly": "Email me directly",
     "copied": "Copied!",
-    "copyEmail": "Copy email",
-    "form": {
-      "label": {
-        "subject": "Subject",
-        "message": "Message"
-      },
-      "button": "Send Message"
-    }
+    "copyEmail": "Copy email"
   },
   "footer": {
     "contactTitle": "Contact",
@@ -206,5 +209,10 @@
     "builtWith": "Built with {{heart}} and modern web technologies",
     "copyright": "© {{year, digits}} {{brand}}",
     "rightsReserved": "All rights reserved."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "message": "Please refresh the page to try again.",
+    "button": "Refresh Page"
   }
 }
