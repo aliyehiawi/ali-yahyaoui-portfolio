@@ -4,7 +4,7 @@ const TimelineItem = ({ title, company, paragraphs }) => {
   return (
     <div className="timeline-item card-3d bg-gray-900 p-6 rounded-xl shadow-lg mb-8">
       <div className="flex flex-col md:flex-row justify-between mb-2">
-        <h3 className="text-xl font-semibold text-primary md:flex-1 md:mr-4">{title}</h3>
+        <h3 className="text-xl font-semibold text-primary md:flex-1 md:me-4">{title}</h3>
         <span className="text-gray-400 md:flex-shrink-0 md:whitespace-nowrap">{company}</span>
       </div>
 

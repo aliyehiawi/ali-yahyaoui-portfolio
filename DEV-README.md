@@ -40,8 +40,9 @@ npm run lint
 
 - **i18next** - Translation framework
 - **react-i18next** - React bindings
+- **I18nProvider** - Custom RTL direction management
 - Custom digit transformation for Arabic numerals
-- RTL layout support
+- Automatic RTL support using CSS logical properties
 
 ### Forms & Validation
 
@@ -84,20 +85,24 @@ Located in `src/i18n/locales/`:
 ### Key Features
 
 1. **Automatic RTL Support**
+   - Arabic language automatically enables RTL layout via `I18nProvider` component
+   - Uses CSS logical properties (e.g., `margin-inline-start`, `padding-inline-end`)
+   - Tailwind's built-in logical utilities: `ms-*`, `me-*`, `ps-*`, `pe-*`
+   - Direction-agnostic spacing with `gap-*` utilities
+   - Automatic `dir` attribute switching on `<html>` element
+   - Arabic typography with Tajawal font from Google Fonts
 
-   - Arabic language automatically enables RTL layout
-   - No manual CSS adjustments needed
 2. **Arabic Numerals**
-
    - Western digits (0-9) automatically convert to Arabic (٠-٩)
    - Use `{{value, digits}}` in translations
-3. **Form Validation**
+   - Configured in `src/i18n/i18n.js`
 
+3. **Form Validation**
    - Custom validation messages in all languages
    - Implemented via `setCustomValidity()` API
    - See `AnimatedContactSection.jsx` lines 95-131
-4. **Dynamic Phone Formatting**
 
+4. **Dynamic Phone Formatting**
    - Pattern-based formatting in `Layout.jsx`
    - Supports multiple country codes
    - Easily extensible for new formats

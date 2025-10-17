@@ -89,7 +89,7 @@ const Layout = ({ children }) => {
             {t("nav.brand")}
           </a>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex gap-8">
             {sections.map((section) => (
               <a
                 key={section}
@@ -101,8 +101,8 @@ const Layout = ({ children }) => {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4">
-            <div className="hidden sm:flex space-x-2">
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:flex gap-2">
               {langs.map(({ code, label }) => (
                 <button
                   key={code}
@@ -140,7 +140,7 @@ const Layout = ({ children }) => {
             </a>
           ))}
 
-          <div className="flex space-x-4 pt-4">
+          <div className="flex gap-4 pt-4">
             {langs.map(({ code, label }) => (
               <button
                 key={code}
@@ -169,11 +169,11 @@ const Layout = ({ children }) => {
               {t("footer.contactTitle", { defaultValue: "Contact" })}
             </h4>
             <ul className="space-y-3">
-              <li className="flex items-center">
-                <i className="fas fa-envelope text-primary text-lg mr-3" />
+              <li className="flex items-center gap-3">
+                <i className="fas fa-envelope text-primary text-lg" />
                 <a
                   href={`mailto:${rawEmail}`}
-                  className="hover:text-white transition mr-2"
+                  className="hover:text-white transition"
                 >
                   {rawEmail}
                 </a>
@@ -189,13 +189,13 @@ const Layout = ({ children }) => {
                   <i className="fas fa-copy" />
                 </button>
                 {copied && (
-                  <span className="ml-2 text-sm text-green-400">
+                  <span className="ms-2 text-sm text-green-400">
                     {t("contact.copied", { defaultValue: "Copied!" })}
                   </span>
                 )}
               </li>
-              <li className="flex items-center">
-                <i className="fas fa-phone-alt text-primary text-lg mr-3" />
+              <li className="flex items-center gap-3">
+                <i className="fas fa-phone-alt text-primary text-lg" />
                 <a
                   href={`tel:+${rawPhone}`}
                   className="hover:text-white transition"
@@ -203,8 +203,8 @@ const Layout = ({ children }) => {
                   {formattedPhone}
                 </a>
               </li>
-              <li className="flex items-center">
-                <i className="fas fa-map-marker-alt text-primary text-lg mr-3" />
+              <li className="flex items-center gap-3">
+                <i className="fas fa-map-marker-alt text-primary text-lg" />
                 <span>{t("contact.location")}</span>
               </li>
             </ul>
@@ -242,7 +242,7 @@ const Layout = ({ children }) => {
                 })}
               </p>
             </div>
-            <div className="space-x-4">
+            <div className="flex gap-4">
               <a
                 href="https://github.com/aliyehiawi"
                 target="_blank"

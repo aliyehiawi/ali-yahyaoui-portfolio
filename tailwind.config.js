@@ -14,7 +14,7 @@ export default {
         light: "#f8fafc"
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'Tajawal', 'sans-serif'],
         mono: ['Fira Code', 'monospace']
       },
       keyframes: {
@@ -34,4 +34,7 @@ export default {
     },
   },
   plugins: [],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 }

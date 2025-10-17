@@ -1,18 +1,17 @@
 'use client';
 
-import '../index.css';     // global styles
-import '../i18n/i18n';     // load translations
-
+import '../index.css';
+import '../i18n/i18n';
 import { StrictMode } from 'react';
 import App from '../App';
+import I18nProvider from '../components/I18nProvider';
 
-/**
- * Home route – renders the same <App /> component you had in CRA.
- */
 export default function Home() {
   return (
     <StrictMode>
-      <App />
+      <I18nProvider>
+        <App />
+      </I18nProvider>
     </StrictMode>
   );
 }

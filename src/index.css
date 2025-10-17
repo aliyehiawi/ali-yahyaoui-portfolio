@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Global Base */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #000;
@@ -14,14 +13,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Tech Tag */
 .tech-tag {
   display: inline-block;
   background: rgba(59, 130, 246, 0.2);
   color: #3b82f6;
   padding: 2px 8px;
   border-radius: 4px;
-  margin-right: 6px;
+  margin-inline-end: 6px;
   margin-bottom: 6px;
   font-size: 0.8rem;
   font-family: 'Fira Code', monospace;
@@ -32,7 +30,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Language Badge */
 .language-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -58,7 +55,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Card 3D */
 .card-3d {
   transform-style: preserve-3d;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -75,7 +71,6 @@ body {
   box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
 }
 
-/* Skill Icon */
 .skill-icon {
   transition: all 0.3s ease;
 }
@@ -84,7 +79,6 @@ body {
   transform: scale(1.2) rotate(10deg);
 }
 
-/* Gradient Text */
 .gradient-text {
   background: linear-gradient(90deg, #3b82f6, #10b981);
   -webkit-background-clip: text;
@@ -92,7 +86,6 @@ body {
   color: transparent;
 }
 
-/* Section Scroll Animations */
 .section {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -103,27 +96,25 @@ body {
   transform: translateY(0);
 }
 
-/* Language Flag (if needed) */
 .language-flag {
   width: 24px;
   height: 16px;
   display: inline-block;
-  margin-right: 8px;
+  margin-inline-end: 8px;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Timeline (Experience) */
 .timeline-item {
   position: relative;
-  padding-left: 30px;
+  padding-inline-start: 30px;
   margin-bottom: 30px;
 }
 
 .timeline-item:before {
   content: '';
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 5px;
   width: 16px;
   height: 16px;
@@ -135,7 +126,7 @@ body {
 .timeline-item:after {
   content: '';
   position: absolute;
-  left: 7px;
+  inset-inline-start: 7px;
   top: 25px;
   width: 2px;
   height: calc(100% - 20px);

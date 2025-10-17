@@ -224,7 +224,7 @@ export default function AnimatedContactSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
-              <i className="fas fa-envelope mr-2"></i>
+              <i className="fas fa-envelope me-2"></i>
               {t('contact.emailDirectly')}
             </a>
           </div>
