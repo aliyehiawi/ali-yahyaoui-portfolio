@@ -15,7 +15,7 @@ const About = () => {
           <div className="mb-8">
             <article className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
               <div className="flex items-start">
-                <div className="flex-shrink-0 mr-4">
+                <div className="flex-shrink-0 me-4">
                   <i className="fas fa-graduation-cap text-4xl text-accent"></i>
                 </div>
                 <div className="flex-1">

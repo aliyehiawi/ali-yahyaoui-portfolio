@@ -34,7 +34,7 @@ export default function Hero() {
             download="Ali Yahyaoui CV.pdf"
             className="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg transition transform hover:scale-105 shadow-lg inline-flex items-center"
           >
-            <i className="fas fa-download mr-2" />
+            <i className="fas fa-download me-2" />
             {t('hero.cta.download')}
           </a>
         </div>

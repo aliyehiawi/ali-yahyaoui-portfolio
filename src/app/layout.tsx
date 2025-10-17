@@ -62,13 +62,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
-        {/* viewport is already handled by Next, but keeping it is fine */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <base target="_self" />
 
         {/* Google Fonts */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Tajawal:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
 
@@ -80,8 +79,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
 
       <body>
-        {/* ────────────────────────────────────────────────
-            App content (your <App /> tree) renders here  */}
         {children}
 
         <noscript>

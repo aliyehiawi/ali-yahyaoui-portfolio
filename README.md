@@ -70,15 +70,21 @@ src/
 The portfolio supports three languages with complete translation coverage:
 
 - **English** - Default language
-- **Arabic** - Full RTL support with Arabic numerals
+- **Arabic** - Full RTL (Right-to-Left) support with Arabic numerals and Tajawal font
 - **French** - Complete translations
 
-**Features:**
+**RTL Features:**
+- Automatic RTL layout switching when Arabic is selected
+- CSS logical properties for direction-agnostic styling
+- Tailwind's built-in logical utilities (`ms-*`, `me-*`, `ps-*`, `pe-*`)
+- Automatic text direction (`dir` attribute)
+- Arabic typography with Tajawal font
+
+**Other Features:**
 - Automatic language detection
 - Persistent language selection
 - Localized form validation messages
 - Dynamic content translation (dates, numbers)
-- RTL layout support for Arabic
 
 ## Getting Started
 
