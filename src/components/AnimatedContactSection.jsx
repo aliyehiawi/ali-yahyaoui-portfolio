@@ -8,6 +8,9 @@ export default function AnimatedContactSection() {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const nameInputRef = useRef(null);
+  const emailInputRef = useRef(null);
+  const messageInputRef = useRef(null);
 
   useEffect(() => {
     const THREE = window.THREE;
@@ -89,6 +92,43 @@ export default function AnimatedContactSection() {
     };
   }, []);
 
+  useEffect(() => {
+    const nameInput = nameInputRef.current;
+    const emailInput = emailInputRef.current;
+    const messageInput = messageInputRef.current;
+
+    if (nameInput) {
+      nameInput.oninvalid = () => {
+        nameInput.setCustomValidity(t('contact.form.nameRequired'));
+      };
+      nameInput.oninput = () => {
+        nameInput.setCustomValidity('');
+      };
+    }
+
+    if (emailInput) {
+      emailInput.oninvalid = () => {
+        if (emailInput.validity.valueMissing) {
+          emailInput.setCustomValidity(t('contact.form.emailRequired'));
+        } else if (emailInput.validity.typeMismatch) {
+          emailInput.setCustomValidity(t('contact.form.emailInvalid'));
+        }
+      };
+      emailInput.oninput = () => {
+        emailInput.setCustomValidity('');
+      };
+    }
+
+    if (messageInput) {
+      messageInput.oninvalid = () => {
+        messageInput.setCustomValidity(t('contact.form.messageRequired'));
+      };
+      messageInput.oninput = () => {
+        messageInput.setCustomValidity('');
+      };
+    }
+  }, [t]);
+
   return (
     <section id="animated-contact" className="relative h-screen overflow-visible bg-black">
       <div ref={mountRef} className="absolute inset-0" />
@@ -101,7 +141,6 @@ export default function AnimatedContactSection() {
           {t('contact.cta.subheading')}
         </p>
 
-        {/* Contact Form */}
         {!submitted ? (
           <form
             onSubmit={async (e) => {
@@ -123,11 +162,11 @@ export default function AnimatedContactSection() {
                   setSubmitted(true);
                 } else {
                   console.error('Form submission failed');
-                  alert('There was an error submitting the form. Please try again.');
+                  alert(t('contact.form.error'));
                 }
               } catch (error) {
                 console.error('Form submission error:', error);
-                alert('There was an error submitting the form. Please try again.');
+                alert(t('contact.form.error'));
               } finally {
                 setIsSubmitting(false);
               }
@@ -135,30 +174,33 @@ export default function AnimatedContactSection() {
             className="flex flex-col gap-4 w-full max-w-md text-left"
           >
             <input
+              ref={nameInputRef}
               type="text"
               name="name"
               id="name"
               required
-              placeholder="Your name"
-              aria-label="Your name"
+              placeholder={t('contact.form.namePlaceholder')}
+              aria-label={t('contact.form.namePlaceholder')}
               className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
+              ref={emailInputRef}
               type="email"
               name="email"
               id="email"
               required
-              placeholder="Your email"
-              aria-label="Your email"
+              placeholder={t('contact.form.emailPlaceholder')}
+              aria-label={t('contact.form.emailPlaceholder')}
               className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <textarea
+              ref={messageInputRef}
               name="message"
               id="message"
               required
-              placeholder="Your message"
+              placeholder={t('contact.form.messagePlaceholder')}
               rows={5}
-              aria-label="Your message"
+              aria-label={t('contact.form.messagePlaceholder')}
               className="rounded-md px-4 py-3 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
             <button
@@ -173,12 +215,11 @@ export default function AnimatedContactSection() {
           <p className="text-green-400 font-semibold mt-6">{t('contact.cta.thankyou')}</p>
         )}
 
-        {/* Email directly option */}
         {!submitted && (
           <div className="mt-6 text-center">
             <p className="text-gray-400 mb-3">{t('contact.or')}</p>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=ali.yehiawii@gmail.com&su=Hello from your portfolio"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ali.yehiawii@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"

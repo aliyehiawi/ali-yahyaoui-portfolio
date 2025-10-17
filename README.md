@@ -1,137 +1,151 @@
-# Ali Yahyaoui - Portfolio
+# Ali Yahyaoui - Software Engineer Portfolio
 
-A modern, responsive portfolio website showcasing my skills, experience, and projects as a Software Engineer.
+> A modern, multilingual portfolio showcasing my expertise as a Software Engineer specializing in full-stack development and system architecture.
 
-## 🚀 Features
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue.svg)](https://www.linkedin.com/in/ali-yahyaoui-a49a6421b)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black.svg)](https://github.com/aliyehiawi)
 
-- **Multilingual Support**: English, Arabic, and French
-- **3D Background Animation**: Interactive Three.js background
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Smooth Animations**: GSAP-powered scroll animations
-- **Contact Form**: Formspree integration for easy communication
-- **Modern Tech Stack**: React, Next.js, TypeScript, Tailwind CSS
-- **Performance Optimized**: Fast loading and smooth interactions
+## About
 
-## 🛠️ Tech Stack
+Personal portfolio website built with modern web technologies featuring responsive design, 3D animations, and complete multilingual support in English, Arabic (RTL), and French.
 
-- **Frontend**: React 19, Next.js 15, TypeScript
-- **Styling**: Tailwind CSS, CSS3
-- **Animations**: GSAP, Three.js, Vanilla Tilt
-- **Internationalization**: i18next, react-i18next
-- **Form Handling**: Formspree
-- **Icons**: Font Awesome
-- **Fonts**: Inter, Fira Code
+## Key Features
 
-## 📦 Installation
+- **Multilingual Support** - Seamless language switching between English, Arabic (RTL), and French with full translation coverage
+- **3D Interactive Background** - Powered by Three.js for engaging visual experience
+- **Responsive Design** - Optimized for all devices from mobile to desktop
+- **Smooth Animations** - GSAP-powered scroll animations and Vanilla Tilt effects
+- **Smart Contact Form** - Integrated with Formspree, with localized validation messages
+- **Modern Tech Stack** - Built with React 19, Next.js 15, TypeScript, and Tailwind CSS
+- **Dynamic Phone Formatting** - Automatic phone number formatting based on country code
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/aliyehiawi/ali-yahyaoui-portfolio.git
-   cd ali-yahyaoui-portfolio
-   ```
+## Technologies Used
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### Core
+- **React 19** - UI framework
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first styling
 
-3. **Set up environment variables**
-   Create a `.env.local` file:
-   ```env
-   NEXT_PUBLIC_FORMSPREE_ID=your_formspree_form_id
-   ```
+### Animations & 3D
+- **GSAP** - Scroll animations and transitions
+- **Three.js** - 3D background effects
+- **Vanilla Tilt** - 3D card tilt effects
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+### Internationalization
+- **i18next** - Translation management
+- **react-i18next** - React integration with automatic RTL support
 
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+### Additional Tools
+- **Formspree** - Contact form backend
+- **Font Awesome** - Icon library
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 src/
 ├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
 ├── components/             # React components
-│   ├── Layout.jsx         # Main layout with navigation
+│   ├── Layout.jsx         # Navigation & Footer
 │   ├── Hero.jsx           # Hero section
-│   ├── About.jsx          # About section
-│   ├── Skills.jsx         # Skills section
-│   ├── Experience.jsx     # Experience timeline
-│   ├── Projects.jsx       # Projects showcase
-│   └── AnimatedContactSection.jsx # Contact form
+│   ├── About.jsx          # About & Education
+│   ├── Skills.jsx         # Technical skills
+│   ├── Experience.jsx     # Work experience
+│   ├── Projects.jsx       # Featured projects
+│   ├── AnimatedContactSection.jsx # Contact form with 3D background
+│   ├── Background3D.jsx   # Three.js background
+│   └── ErrorBoundary.jsx  # Error handling
 ├── hooks/                  # Custom React hooks
+│   └── useGsapEffects.js  # GSAP animations
 ├── i18n/                   # Internationalization
-│   └── locales/           # Translation files
-└── index.css              # Global styles
+│   ├── i18n.js           # i18next configuration
+│   └── locales/          # Translation files (en, ar, fr)
+└── index.css              # Global styles & animations
 ```
 
-## 🌐 Internationalization
+## Multilingual Support
 
-The portfolio supports three languages:
-- **English** (en) - Default
-- **Arabic** (ar) - RTL support
-- **French** (fr)
+The portfolio supports three languages with complete translation coverage:
 
-Translation files are located in `src/i18n/locales/`.
+- **English** - Default language
+- **Arabic** - Full RTL support with Arabic numerals
+- **French** - Complete translations
 
-## 🎨 Customization
+**Features:**
+- Automatic language detection
+- Persistent language selection
+- Localized form validation messages
+- Dynamic content translation (dates, numbers)
+- RTL layout support for Arabic
 
-### Colors & Styling
-- Primary colors are defined in `tailwind.config.js`
-- Gradient text uses CSS custom properties
-- 3D card effects are in `src/index.css`
+## Getting Started
 
-### Content
-- Update personal information in translation files
-- Modify project details in `Projects.jsx`
-- Update experience in `Experience.jsx`
+### Prerequisites
 
-### Contact Form
-- Replace Formspree form ID in `AnimatedContactSection.jsx`
-- Update email and phone in translation files
+- Node.js (v18 or higher)
+- npm or yarn
 
-## 📱 Responsive Design
+### Installation
 
-The portfolio is fully responsive with breakpoints:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+1. Clone the repository
 
-## 🚀 Deployment
+```bash
+git clone https://github.com/aliyehiawi/ali-yahyaoui-portfolio.git
+```
 
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
+2. Navigate to the project directory
 
-### Netlify
-1. Build the project: `npm run build`
-2. Deploy the `out` folder to Netlify
+```bash
+cd ali-yahyaoui-portfolio
+```
 
-### Other Platforms
-The project works with any static hosting service.
+3. Install dependencies
 
-## 🔧 Available Scripts
+```bash
+npm install
+```
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm test` - Run tests
+4. Run the development server
 
-## 📄 License
+```bash
+npm run dev
+```
 
-This project is private and proprietary. All rights reserved.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 🤝 Contact
+## Key Sections
 
-- **Email**: ali.yehiawii@gmail.com
-- **LinkedIn**: [Ali Yehiawi](https://www.linkedin.com/in/ali-yehiawi-a49a6421b)
-- **GitHub**: [aliyehiawi](https://github.com/aliyehiawi)
+- **Hero** - Introduction with downloadable CV
+- **About** - Educational background and methodologies
+- **Skills** - Technical skills categorized by domain
+- **Experience** - Professional work history
+- **Projects** - Featured project portfolio
+- **Contact** - Interactive 3D contact form
+
+## Contact
+
+- **Email**: [ali.yehiawii@gmail.com](mailto:ali.yehiawii@gmail.com)
+- **Phone**: +33 07 65 77 60 14
+- **LinkedIn**: [Ali Yahyaoui](https://www.linkedin.com/in/ali-yahyaoui-a49a6421b)
+- **GitHub**: [@aliyehiawi](https://github.com/aliyehiawi)
+- **Location**: Saint-Étienne, France
+
+## Education
+
+**Master's in Cyber-Physical and Social Systems (CPS2)**  
+École des Mines de Saint-Étienne & Université Jean Monnet, University of Lyon  
+*2025 – Present*
+
+**Bachelor's in Computer Science**  
+Lebanese University  
+*2019 – 2022*
+
+## License
+
+All rights reserved © 2025 Ali Yahyaoui
 
 ---
 
-Built with ❤️ using modern web technologies
+**Note**: This portfolio is continuously updated to reflect my latest projects and skills. Feel free to explore and reach out if you'd like to connect!

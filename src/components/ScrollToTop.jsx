@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled up to given distance
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
       setIsVisible(true);
@@ -14,7 +13,6 @@ const ScrollToTop = () => {
     }
   };
 
-  // Set the scroll event listener
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     return () => {
@@ -22,7 +20,6 @@ const ScrollToTop = () => {
     };
   }, []);
 
-  // Scroll to top handler
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

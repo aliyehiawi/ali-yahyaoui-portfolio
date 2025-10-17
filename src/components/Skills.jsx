@@ -22,6 +22,7 @@ const Skills = () => {
               t("skills.frontend.typeScript"),
               t("skills.frontend.angular"),
               t("skills.frontend.react"),
+              t("skills.frontend.vueJs"),
               t("skills.frontend.primeNg"),
               t("skills.frontend.jsp"),
               t("skills.frontend.jsf"),
@@ -34,6 +35,8 @@ const Skills = () => {
             title={t("skills.backend.title")}
             techs={[
               t("skills.backend.java"),
+              t("skills.backend.python"),
+              t("skills.backend.ruby"),
               t("skills.backend.springBoot"),
               t("skills.backend.hibernate"),
               t("skills.backend.restApis"),
@@ -41,7 +44,6 @@ const Skills = () => {
               t("skills.backend.jpa"),
               t("skills.backend.nodeJs"),
               t("skills.backend.express"),
-              // t("skills.backend.graphql")
             ]}
           />
 
@@ -55,9 +57,6 @@ const Skills = () => {
               t("skills.database.mongoDb"),
               t("skills.database.postgreSql"),
               t("skills.database.docker"),
-              // t("skills.database.kubernetes"),
-              // t("skills.database.aws"),
-              // t("skills.database.ciCd")
             ]}
           />
         </div>

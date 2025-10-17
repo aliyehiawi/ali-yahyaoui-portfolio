@@ -4,7 +4,6 @@
     "about": "من أنا",
     "skills": "المهارات",
     "experience": "الخبرة",
-    "projects": "المشاريع",
     "contact": "تواصل معي"
   },
   "hero": {
@@ -12,7 +11,6 @@
     "subtitle": "مهندس برمجيات",
     "description": "أقوم بتصميم وبناء تطبيقات ويب عالية الأداء وقابلة للتوسع باستخدام أحدث التقنيات ومبادئ تصميم الأنظمة القوية.",
     "cta": {
-      "contact": "تواصل معي",
       "download": "تحميل السيرة الذاتية"
     },
     "imageAlt": "صورة شخصية احترافية"
@@ -27,6 +25,12 @@
     },
     "education": {
       "title": "التعليم",
+      "masters": "ماجستير في الأنظمة السيبرانية الفيزيائية والاجتماعية (CPS2)",
+      "mastersUniversity": "{{school1}} و {{school2}}، جامعة ليون",
+      "mastersSchool1": "مدرسة المناجم في سانت إتيان",
+      "mastersSchool2": "جامعة جان مونيه",
+      "mastersYears": "2025 – حتى الآن",
+      "mastersDescription": "تصميم ودمج الأنظمة السيبرانية الفيزيائية الذكية التي تتفاعل مع الأبعاد الفيزيائية والاجتماعية والرقمية. اكتساب المعرفة في إنترنت الأشياء، تطبيقات الويب والجوال، الذكاء الاصطناعي، الحوسبة السحابية والطرفية، التوائم الرقمية، الأمن السيبراني والكتابة العلمية.",
       "degree": "درجة بكالوريوس في علوم الحاسوب",
       "university": "{{school}}، {{years, digits}}",
       "universitySchool": "الجامعة اللبنانية",
@@ -37,8 +41,7 @@
     "methods": {
       "title": "المنهجيات",
       "agile": "التطوير الرشيق",
-      "microservices": "معمارية الخدمات المصغرة",
-      "tdd": "التطوير القائم على الاختبار"
+      "microservices": "معمارية الخدمات المصغرة"
     },
     "description": "أنا مهندس برمجيات ذو خبرة مثبتة في تطوير نظم الخادم القوية وميزات المواقع الإلكترونية للعملاء الكبار. معروف بسرعة التعلم والعمل الجماعي الاستثنائي، أتميز في البيئات سريعة الوتيرة، وأقدم حلول برمجية عالية الجودة."
   },
@@ -52,6 +55,7 @@
       "typeScript": "TypeScript",
       "angular": "Angular",
       "react": "React",
+      "vueJs": "Vue.js",
       "primeNg": "PrimeNG",
       "jsp": "JSP",
       "jsf": "JSF",
@@ -60,14 +64,15 @@
     "backend": {
       "title": "تطوير الواجهة الخلفية",
       "java": "Java",
+      "python": "Python",
+      "ruby": "Ruby",
       "springBoot": "Spring Boot",
       "hibernate": "Hibernate",
       "restApis": "REST APIs",
       "microservices": "Microservices",
       "jpa": "JPA",
       "nodeJs": "Node.js",
-      "express": "Express",
-      "graphql": "GraphQL"
+      "express": "Express"
     },
     "database": {
       "title": "قواعد البيانات و DevOps",
@@ -76,10 +81,7 @@
       "plSql": "PL/SQL",
       "mongoDb": "MongoDB",
       "postgreSql": "PostgreSQL",
-      "docker": "Docker",
-      "kubernetes": "Kubernetes",
-      "aws": "AWS",
-      "ciCd": "CI/CD"
+      "docker": "Docker"
     }
   },
   "experience": {
@@ -175,10 +177,8 @@
     }
   },
   "contact": {
-    "heading": "تواصل معي",
-    "infoTitle": "معلومات الاتصال",
     "email": "ali.yehiawii@gmail.com",
-    "phoneRaw": "96178962143",
+    "phoneRaw": "33765776014",
     "location": "سانت-إتيان، فرنسا",
     "cta": {
       "heading": "هل أنت مستعد للارتقاء بحضورك الرقمي؟",
@@ -187,17 +187,20 @@
       "sending": "جاري الإرسال...",
       "thankyou": "شكراً لك! سأتصل بك قريباً."
     },
+    "form": {
+      "namePlaceholder": "اسمك",
+      "emailPlaceholder": "بريدك الإلكتروني",
+      "messagePlaceholder": "رسالتك",
+      "error": "حدث خطأ أثناء إرسال النموذج. يرجى المحاولة مرة أخرى.",
+      "nameRequired": "يرجى ملء هذا الحقل.",
+      "emailRequired": "يرجى ملء هذا الحقل.",
+      "emailInvalid": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+      "messageRequired": "يرجى ملء هذا الحقل."
+    },
     "or": "— أو —",
     "emailDirectly": "راسلني مباشرة",
     "copied": "تم النسخ!",
-    "copyEmail": "نسخ البريد الإلكتروني",
-    "form": {
-      "label": {
-        "subject": "الموضوع",
-        "message": "الرسالة"
-      },
-      "button": "إرسال الرسالة"
-    }
+    "copyEmail": "نسخ البريد الإلكتروني"
   },
   "footer": {
     "contactTitle": "اتصل",
@@ -206,5 +209,10 @@
     "builtWith": "بُني باستخدام {{heart}} وتقنيات الويب الحديثة",
     "copyright": "© {{year, digits}} {{brand}}",
     "rightsReserved": "جميع الحقوق محفوظة."
+  },
+  "error": {
+    "title": "حدث خطأ ما",
+    "message": "يرجى تحديث الصفحة للمحاولة مرة أخرى.",
+    "button": "تحديث الصفحة"
   }
 }

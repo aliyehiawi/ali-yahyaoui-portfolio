@@ -8,7 +8,6 @@ const Background3D = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -27,7 +26,6 @@ const Background3D = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
-    // Floating cubes
     const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
     const cubeMaterial = new THREE.MeshBasicMaterial({
       color: 0x3b82f6,
@@ -55,7 +53,6 @@ const Background3D = () => {
       scene.add(cube);
     }
 
-    // Snow particles
     const particlesGeometry = new THREE.BufferGeometry();
     const particlesCount = 1000;
     const posArray = new Float32Array(particlesCount * 3);
@@ -75,7 +72,6 @@ const Background3D = () => {
     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
     scene.add(particlesMesh);
 
-    // Animation loop
     let frameId;
     const animate = () => {
       frameId = requestAnimationFrame(animate);
@@ -95,7 +91,6 @@ const Background3D = () => {
 
     animate();
 
-    // Resize handler
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -103,7 +98,6 @@ const Background3D = () => {
     };
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(frameId);
       window.removeEventListener("resize", handleResize);

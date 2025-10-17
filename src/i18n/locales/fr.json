@@ -4,7 +4,6 @@
     "about": "À propos",
     "skills": "Compétences",
     "experience": "Expérience",
-    "projects": "Projets",
     "contact": "Contact"
   },
   "hero": {
@@ -12,7 +11,6 @@
     "subtitle": "Ingénieur Logiciel",
     "description": "Je conçois et développe des applications web performantes et évolutives en utilisant des technologies de pointe et des principes solides de conception de systèmes.",
     "cta": {
-      "contact": "Contactez-moi",
       "download": "Télécharger le CV"
     },
     "imageAlt": "Photo de profil professionnelle"
@@ -27,6 +25,12 @@
     },
     "education": {
       "title": "Éducation",
+      "masters": "Master en Systèmes Cyber-Physiques et Sociaux (CPS2)",
+      "mastersUniversity": "{{school1}} & {{school2}}, Université de Lyon",
+      "mastersSchool1": "École des Mines de Saint-Étienne",
+      "mastersSchool2": "Université Jean Monnet",
+      "mastersYears": "2025 – Présent",
+      "mastersDescription": "Conception et intégration de systèmes cyber-physiques intelligents qui interfacent les dimensions physiques, sociales et numériques. Acquisition de connaissances en IoT, Applications Web & Mobiles, IA, Cloud & Edge Computing, Jumeaux Numériques, Cybersécurité et Rédaction Scientifique.",
       "degree": "Licence en informatique",
       "university": "{{school}}, {{years, digits}}",
       "universitySchool": "Université libanaise",
@@ -37,8 +41,7 @@
     "methods": {
       "title": "Méthodologies",
       "agile": "Développement Agile",
-      "microservices": "Architecture microservices",
-      "tdd": "Développement piloté par les tests"
+      "microservices": "Architecture microservices"
     },
     "description": "Je suis un ingénieur logiciel expérimenté avec un bilan éprouvé dans le développement de systèmes back-end robustes et de fonctionnalités de sites Web pour de grands clients. Reconnu pour ma capacité d’apprentissage rapide et mon esprit d’équipe exceptionnel, j’excelle dans les environnements dynamiques en fournissant des solutions logicielles de haute qualité."
   },
@@ -52,6 +55,7 @@
       "typeScript": "TypeScript",
       "angular": "Angular",
       "react": "React",
+      "vueJs": "Vue.js",
       "primeNg": "PrimeNG",
       "jsp": "JSP",
       "jsf": "JSF",
@@ -60,14 +64,15 @@
     "backend": {
       "title": "Développement Backend",
       "java": "Java",
+      "python": "Python",
+      "ruby": "Ruby",
       "springBoot": "Spring Boot",
       "hibernate": "Hibernate",
       "restApis": "REST APIs",
       "microservices": "Microservices",
       "jpa": "JPA",
       "nodeJs": "Node.js",
-      "express": "Express",
-      "graphql": "GraphQL"
+      "express": "Express"
     },
     "database": {
       "title": "Bases de données et DevOps",
@@ -76,10 +81,7 @@
       "plSql": "PL/SQL",
       "mongoDb": "MongoDB",
       "postgreSql": "PostgreSQL",
-      "docker": "Docker",
-      "kubernetes": "Kubernetes",
-      "aws": "AWS",
-      "ciCd": "CI/CD"
+      "docker": "Docker"
     }
   },
   "experience": {
@@ -176,10 +178,8 @@
     }
   },
   "contact": {
-    "heading": "Contactez-moi",
-    "infoTitle": "Informations de contact",
     "email": "ali.yehiawii@gmail.com",
-    "phoneRaw": "96178962143",
+    "phoneRaw": "33765776014",
     "location": "Saint-Étienne, France",
     "cta": {
       "heading": "Prêt à donner un nouvel élan à votre présence numérique ?",
@@ -188,17 +188,20 @@
       "sending": "Envoi en cours...",
       "thankyou": "Merci ! Je vous recontacterai bientôt."
     },
+    "form": {
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "Votre email",
+      "messagePlaceholder": "Votre message",
+      "error": "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer.",
+      "nameRequired": "Veuillez remplir ce champ.",
+      "emailRequired": "Veuillez remplir ce champ.",
+      "emailInvalid": "Veuillez entrer une adresse email valide.",
+      "messageRequired": "Veuillez remplir ce champ."
+    },
     "or": "— ou —",
     "emailDirectly": "M'envoyer un email directement",
     "copied": "Copié !",
-    "copyEmail": "Copier l’email",
-    "form": {
-      "label": {
-        "subject": "Objet",
-        "message": "Message"
-      },
-      "button": "Envoyer le message"
-    }
+    "copyEmail": "Copier l'email"
   },
   "footer": {
     "contactTitle": "Contact",
@@ -207,5 +210,10 @@
     "builtWith": "Réalisé avec {{heart}} et des technologies web modernes",
     "copyright": "© {{year, digits}} {{brand}}",
     "rightsReserved": "Tous droits réservés."
+  },
+  "error": {
+    "title": "Une erreur s'est produite",
+    "message": "Veuillez actualiser la page pour réessayer.",
+    "button": "Actualiser la page"
   }
 }

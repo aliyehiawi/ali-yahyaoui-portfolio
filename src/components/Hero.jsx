@@ -1,8 +1,7 @@
-// src/components/Hero.jsx
 'use client';
 
 import { useTranslation, Trans } from 'react-i18next';
-import '../index.css'; // already in page.tsx—remove if duplicated
+import '../index.css';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -12,7 +11,6 @@ export default function Hero() {
       id="hero"
       className="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center"
     >
-      {/* ───────── Left: Text ───────── */}
       <div className="md:w-1/2 mb-10 md:mb-0">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
           <Trans
@@ -42,7 +40,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ───────── Right: Profile Image ───────── */}
       <div className="md:w-1/2 flex justify-center">
         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl transform transition hover:scale-105 hover:shadow-2xl">
           <img
