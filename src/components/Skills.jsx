@@ -36,7 +36,6 @@ const Skills = () => {
             techs={[
               t("skills.backend.java"),
               t("skills.backend.python"),
-              t("skills.backend.ruby"),
               t("skills.backend.springBoot"),
               t("skills.backend.hibernate"),
               t("skills.backend.restApis"),
